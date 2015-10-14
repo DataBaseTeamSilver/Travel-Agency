@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency", "TravelAgency\TravelAgency.csproj", "{0DD7F4BF-2B01-457F-A259-240BE63E72CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency.Logic", "TravelAgency\TravelAgency.Logic.csproj", "{0DD7F4BF-2B01-457F-A259-240BE63E72CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency.UI", "TravelAgencyUI\TravelAgency.UI.csproj", "{413E71A0-C1D1-48BD-881D-4721DC7C2784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency.Model", "TravelAgency.Model\TravelAgency.Model.csproj", "{91E9869C-0492-4B7F-A8F2-E3D0A1B95199}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{0DD7F4BF-2B01-457F-A259-240BE63E72CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DD7F4BF-2B01-457F-A259-240BE63E72CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DD7F4BF-2B01-457F-A259-240BE63E72CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{413E71A0-C1D1-48BD-881D-4721DC7C2784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{413E71A0-C1D1-48BD-881D-4721DC7C2784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{413E71A0-C1D1-48BD-881D-4721DC7C2784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{413E71A0-C1D1-48BD-881D-4721DC7C2784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E9869C-0492-4B7F-A8F2-E3D0A1B95199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E9869C-0492-4B7F-A8F2-E3D0A1B95199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E9869C-0492-4B7F-A8F2-E3D0A1B95199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E9869C-0492-4B7F-A8F2-E3D0A1B95199}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

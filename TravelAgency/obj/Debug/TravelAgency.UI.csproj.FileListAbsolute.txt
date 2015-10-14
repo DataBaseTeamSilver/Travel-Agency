@@ -1,6 +1,3 @@
-E:\Krisi\Telerik\DataBase\TravelAgency\TravelAgency\TravelAgency\bin\Debug\TravelAgency.exe.config
 E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgency\bin\Debug\TravelAgency.exe.config
-E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgency\bin\Debug\TravelAgency.exe
-E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgency\bin\Debug\TravelAgency.pdb
 E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgency\obj\Debug\TravelAgency.exe
 E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgency\obj\Debug\TravelAgency.pdb

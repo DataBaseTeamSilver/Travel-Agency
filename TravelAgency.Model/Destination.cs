@@ -6,8 +6,8 @@
 
         public string Country { get; set; }
 
-        public string Town { get; set; }
+        public double Distance { get; set; }
 
-        public string Subject { get; set; }
+        // Add A relation for the costs
     }
 }

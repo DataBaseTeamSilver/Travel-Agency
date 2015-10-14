@@ -10,3 +10,9 @@ E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\obj\Debug\Tr
 E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\bin\Debug\TravelAgencyUI.exe.config
 E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgencyUI.exe
 E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgencyUI.pdb
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgency.UI.csprojResolveAssemblyReference.cache
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgency.UI.Form1.resources
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgencyUI.Properties.Resources.resources
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgency.UI.csproj.GenerateResource.Cache
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\bin\Debug\TravelAgencyUI.exe
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\bin\Debug\TravelAgencyUI.pdb

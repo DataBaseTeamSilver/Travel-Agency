@@ -1,0 +1,5 @@
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\bin\Debug\TravelAgency.Logic.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\bin\Debug\TravelAgency.Logic.pdb
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\obj\Debug\TravelAgency.Logic.csprojResolveAssemblyReference.cache
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\obj\Debug\TravelAgency.Logic.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\obj\Debug\TravelAgency.Logic.pdb

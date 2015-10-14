@@ -1,0 +1,5 @@
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Model\bin\Debug\TravelAgency.Model.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Model\bin\Debug\TravelAgency.Model.pdb
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Model\obj\Debug\TravelAgency.Model.csprojResolveAssemblyReference.cache
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Model\obj\Debug\TravelAgency.Model.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Model\obj\Debug\TravelAgency.Model.pdb

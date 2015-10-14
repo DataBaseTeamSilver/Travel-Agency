@@ -6,7 +6,7 @@
 
         public string CompanyName { get; set; }
 
-        public string Type { get; set; }
+        public TransportType Type { get; set; }
 
         public int MaxCapacity { get; set; }
     }

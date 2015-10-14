@@ -1,0 +1,9 @@
+E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\bin\Debug\TravelAgencyUI.exe.config
+E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgencyUI.exe
+E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgencyUI.pdb
+E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\bin\Debug\TravelAgencyUI.exe
+E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\bin\Debug\TravelAgencyUI.pdb
+E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgency.UI.csprojResolveAssemblyReference.cache
+E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgency.UI.Form1.resources
+E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgencyUI.Properties.Resources.resources
+E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgency.UI.csproj.GenerateResource.Cache

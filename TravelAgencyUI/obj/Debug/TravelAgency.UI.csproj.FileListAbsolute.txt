@@ -16,3 +16,12 @@ E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgencyUI
 E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgency.UI.csproj.GenerateResource.Cache
 E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\bin\Debug\TravelAgencyUI.exe
 E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgencyUI\bin\Debug\TravelAgencyUI.pdb
+C:\Users\Atanasov\Desktop\TravelAgency\TravelAgencyUI\bin\Debug\TravelAgencyUI.exe.config
+C:\Users\Atanasov\Desktop\TravelAgency\TravelAgencyUI\obj\Debug\TravelAgencyUI.exe
+C:\Users\Atanasov\Desktop\TravelAgency\TravelAgencyUI\obj\Debug\TravelAgencyUI.pdb
+C:\Users\Atanasov\Desktop\TravelAgency\TravelAgencyUI\bin\Debug\TravelAgencyUI.exe
+C:\Users\Atanasov\Desktop\TravelAgency\TravelAgencyUI\bin\Debug\TravelAgencyUI.pdb
+C:\Users\Atanasov\Desktop\TravelAgency\TravelAgencyUI\obj\Debug\TravelAgency.UI.csprojResolveAssemblyReference.cache
+C:\Users\Atanasov\Desktop\TravelAgency\TravelAgencyUI\obj\Debug\TravelAgency.UI.Form1.resources
+C:\Users\Atanasov\Desktop\TravelAgency\TravelAgencyUI\obj\Debug\TravelAgencyUI.Properties.Resources.resources
+C:\Users\Atanasov\Desktop\TravelAgency\TravelAgencyUI\obj\Debug\TravelAgency.UI.csproj.GenerateResource.Cache

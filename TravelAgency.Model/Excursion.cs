@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace TravelAgency.Model
+﻿namespace TravelAgency.Model
 {
+    using System;
+
     public class Excursion
     {
         public int ExcursionId { get; set; }
@@ -21,6 +21,5 @@ namespace TravelAgency.Model
         public int GuideId { get; set; }
 
         public int TransportId { get; set; }
-
     }
 }

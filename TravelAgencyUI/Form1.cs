@@ -16,10 +16,10 @@
 
         private void SearchZip(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialog1.ShowDialog();
+            DialogResult result = this.openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                var path = openFileDialog1.InitialDirectory + openFileDialog1.FileName;
+                var path = this.openFileDialog1.InitialDirectory + this.openFileDialog1.FileName;
                 var extractPath = "../../../extract";
                 using (ZipArchive archive = ZipFile.Open(path, ZipArchiveMode.Update))
                 {
@@ -55,8 +55,8 @@
             {
                 DataSet ds = new DataSet();
                 oleDbDataAdapter.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
-                dataGridView1.AutoSize = true;
+                this.dataGridView1.DataSource = ds.Tables[0];
+                this.dataGridView1.AutoSize = true;
             }
         }
     }

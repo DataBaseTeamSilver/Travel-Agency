@@ -3,3 +3,5 @@ E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\bin\Debug\TravelAgen
 E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\obj\Debug\TravelAgency.Logic.csprojResolveAssemblyReference.cache
 E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\obj\Debug\TravelAgency.Logic.dll
 E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\obj\Debug\TravelAgency.Logic.pdb
+C:\Users\Atanasov\Desktop\TravelAgency\TravelAgency.Logic\obj\Debug\TravelAgency.Logic.csprojResolveAssemblyReference.cache
+C:\Users\Atanasov\Desktop\TravelAgency\TravelAgency.Logic\obj\Debug\TravelAgency.Logic.dll

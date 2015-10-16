@@ -4,7 +4,6 @@
     using iTextSharp.text.pdf;
     using System;
     using System.IO;
-    using Drawing = System.Drawing;
 
     public class PdfGenerator
     {
@@ -13,9 +12,9 @@
             FileStream fs = new FileStream("../../Hello.pdf", FileMode.Create, FileAccess.Write, FileShare.None);
 
             Rectangle rect = new Rectangle(PageSize.A4);
-            //rect.BackgroundColor = new BaseColor(System.Drawing.Color.Black);
+            rect.BackgroundColor = new BaseColor(System.Drawing.Color.LightGray);
 
-            Document doc = new Document();
+            Document doc = new Document(rect);
 
             PdfWriter writer = PdfWriter.GetInstance(doc, fs);
 

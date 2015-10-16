@@ -5,3 +5,10 @@ E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\obj\Debug\TravelAgen
 E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\obj\Debug\TravelAgency.Logic.pdb
 C:\Users\Atanasov\Desktop\TravelAgency\TravelAgency.Logic\obj\Debug\TravelAgency.Logic.csprojResolveAssemblyReference.cache
 C:\Users\Atanasov\Desktop\TravelAgency\TravelAgency.Logic\obj\Debug\TravelAgency.Logic.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\bin\Debug\itextsharp.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\bin\Debug\itextsharp.xml
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\bin\Debug\TravelAgency.Logic.dll.config
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\bin\Debug\EntityFramework.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\bin\Debug\EntityFramework.SqlServer.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\bin\Debug\EntityFramework.xml
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Logic\bin\Debug\EntityFramework.SqlServer.xml

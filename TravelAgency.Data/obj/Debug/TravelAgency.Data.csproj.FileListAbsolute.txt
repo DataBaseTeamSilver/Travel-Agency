@@ -1,0 +1,10 @@
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Data\bin\Debug\TravelAgency.Data.dll.config
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Data\bin\Debug\TravelAgency.Data.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Data\bin\Debug\TravelAgency.Data.pdb
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Data\bin\Debug\EntityFramework.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Data\bin\Debug\EntityFramework.xml
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Data\obj\Debug\TravelAgency.Data.csprojResolveAssemblyReference.cache
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Data\obj\Debug\TravelAgency.Data.dll
+E:\TelerikAcademy\TeamWork\Travel-Agency\TravelAgency.Data\obj\Debug\TravelAgency.Data.pdb

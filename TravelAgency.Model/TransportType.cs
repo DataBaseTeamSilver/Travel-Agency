@@ -3,7 +3,7 @@
     public enum TransportType
     {
         Bus = 0,
-        Aircraft = 1,
+        Airplane = 1,
         Ship = 2
     }
 }

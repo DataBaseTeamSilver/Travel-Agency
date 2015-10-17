@@ -1,3 +1,0 @@
-E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\bin\Debug\TravelAgencyUI.exe.config
-E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgencyUI.exe
-E:\Krisi\Telerik\DataBase\TravelAgency\Travel-Agency\TravelAgencyUI\obj\Debug\TravelAgencyUI.pdb

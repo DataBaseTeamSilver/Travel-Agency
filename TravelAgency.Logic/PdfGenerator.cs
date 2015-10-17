@@ -77,10 +77,15 @@
                 }
             }
 
+            var allClients = excursions.Select(x => x.Clients).Count();
+
+            table.AddCell(this.CreateCell(new Phrase("Total number of clients:"), false, 4));
+            table.AddCell(this.CreateCell(new Phrase(allClients.ToString())));
+
             document.Add(table);
         }
 
-        private PdfPCell CreateCell(Phrase phrase, bool isHeader = false)
+        private PdfPCell CreateCell(Phrase phrase, bool isHeader = false, int cellColspan = 0)
         {
             PdfPCell cell = new PdfPCell(phrase);
             if (isHeader)
@@ -92,6 +97,7 @@
                 cell.BackgroundColor = new BaseColor(204, 204, 255);
             }
 
+            cell.Colspan = cellColspan;
             cell.MinimumHeight = 25;
             cell.VerticalAlignment = Element.ALIGN_MIDDLE;
             cell.HorizontalAlignment = 1;

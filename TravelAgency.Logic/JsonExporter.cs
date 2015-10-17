@@ -4,8 +4,8 @@
     using System.IO;
     using System.Linq;
 
-    using Newtonsoft.Json;
     using Data;
+    using Newtonsoft.Json;
 
     public class JsonExporter
     {
@@ -26,12 +26,11 @@
                     TransportType = x.Transport.Type.ToString(),
                     GuideName = x.Guide.Name
                 }).ToList();
-
             
             foreach (var item in allExcursion)
             {
                 var jsonObj = JsonConvert.SerializeObject(item, Formatting.Indented);
-                var adress = "../../../" + item.ID +".json";
+                var adress = "../../../" + item.ID + ".json";
                 File.WriteAllText(adress, jsonObj);
             }
         }

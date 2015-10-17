@@ -1,18 +1,16 @@
 ﻿namespace TravelAgencyUI
 {
-
     using System.Windows.Forms;
 
     public partial class FirstPage : Form
     {
         public FirstPage()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
-        private void button4_Click(object sender, System.EventArgs e)
+        private void Button4Click(object sender, System.EventArgs e)
         {
-
         }
     }
 }

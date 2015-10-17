@@ -1,15 +1,14 @@
 ﻿namespace TravelAgency.UI
 {
     using System;
+    using System.Collections.Generic;
     using System.Data;
     using System.Data.OleDb;
     using System.IO;
     using System.IO.Compression;
     using System.Windows.Forms;
-    using Logic;
     using Data;
-    using System.Linq;
-    using System.Collections.Generic;
+    using Logic;
     using Model;
 
     public partial class Form1 : Form
@@ -72,16 +71,18 @@
                         destinations.Add(destination);
                     }
                 }
+
                 var db = new TravelAgencyDbContext();
-                foreach(var destination in destinations)
+                foreach (var destination in destinations)
                 {
                     db.Destinations.Add(destination);
                 }
+
                 db.SaveChanges();
             }            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2Click(object sender, EventArgs e)
         {
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext(); 
             PdfGenerator pdfGenerator = new PdfGenerator();
@@ -89,17 +90,16 @@
             pdfGenerator.GeneratePdfReports(dbContext);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3Click(object sender, EventArgs e)
         {
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
             XMLGenerator xmlGenerator = new XMLGenerator();
 
-            xmlGenerator.xmlGenerate(dbContext);
+            xmlGenerator.XmlGenerate(dbContext);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

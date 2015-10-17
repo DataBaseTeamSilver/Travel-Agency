@@ -1,14 +1,13 @@
 ﻿namespace TravelAgency.ConsoleApp
 {
+    using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
+    using System.Data.OleDb;
     using Data;
     using Data.Migrations;
-    using Model;
-    using System.Data.OleDb;
-    using System;
-    using System.Linq;
-    using System.Collections.Generic;
     using Logic;
+    using Model;
 
     public class Startup
     {

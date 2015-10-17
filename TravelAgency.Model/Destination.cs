@@ -27,6 +27,7 @@
             {
                 return this.excursions;
             }
+
             set
             {
                 this.excursions = value;

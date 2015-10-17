@@ -7,14 +7,7 @@
 
     public class XMLGenerator
     {
-        //private TravelAgencyDbContext dbContext;
-        //
-        //public XMLGenerator(TravelAgencyDbContext dbContext)
-        //{
-        //    this.dbContext = dbContext;
-        //}
-
-        public void xmlGenerate(TravelAgencyDbContext dbContext)
+        public void XmlGenerate(TravelAgencyDbContext dbContext)
         {
             XmlTextWriter writer = new XmlTextWriter("../../../Data files/TransportReport.xml", System.Text.Encoding.UTF8);
             writer.WriteStartDocument(true);
@@ -22,9 +15,10 @@
             writer.Indentation = 2;
             writer.WriteStartElement("Table");
             var data = this.GetData(dbContext);
-            foreach(var report in data)
+
+            foreach (var report in data)
             {
-                createNode(report, writer);
+                this.CreateNode(report, writer);
             }
 
             writer.WriteEndElement();
@@ -46,7 +40,7 @@
             return excursions;
         }
 
-        private void createNode(ReportTransport report, XmlTextWriter writer)
+        private void CreateNode(ReportTransport report, XmlTextWriter writer)
         {
             writer.WriteStartElement("Excursion");
             writer.WriteStartElement("Name");

@@ -7,7 +7,7 @@
     public class TarvelAgencyDbContext : DbContext
     {
         public TarvelAgencyDbContext()
-            : base("TarvelAgencyDbContext")
+            : base("TarvelAgencyDb")
         {
         }
 

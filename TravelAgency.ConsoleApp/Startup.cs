@@ -1,6 +1,5 @@
 ﻿namespace TravelAgency.ConsoleApp
 {
-
     using Data;
     using Model;
 

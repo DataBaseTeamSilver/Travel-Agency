@@ -1,7 +1,6 @@
 ﻿namespace TravelAgency.Data
 {
     using System.Data.Entity;
-
     using Model;
 
     public class TarvelAgencyDbContext : DbContext

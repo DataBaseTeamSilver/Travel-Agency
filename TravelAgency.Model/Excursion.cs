@@ -2,6 +2,7 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Excursion
     {
@@ -26,6 +27,7 @@
 
         [Required]
         [Range(100, 10000)]
+        [Column(TypeName = "Money")]
         public decimal PricePerClient { get; set; }
 
         [Required]

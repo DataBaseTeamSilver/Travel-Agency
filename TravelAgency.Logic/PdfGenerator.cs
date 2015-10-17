@@ -19,7 +19,7 @@
         //    GeneratePdfReports(dbContext);
         //}
 
-        public void GeneratePdfReports(TarvelAgencyDbContext dbContext)
+        public void GeneratePdfReports(TravelAgencyDbContext dbContext)
         {
             FileStream fs = new FileStream("../../Reports.pdf", FileMode.Create, FileAccess.Write, FileShare.None);
 
@@ -40,7 +40,7 @@
             return rect;
         }
 
-        private void FillDocument(Document document, TarvelAgencyDbContext dbContext)
+        private void FillDocument(Document document, TravelAgencyDbContext dbContext)
         {
             document.Open();
 
@@ -49,7 +49,7 @@
             document.Close();
         }
 
-        private void GenerateData(Document document, TarvelAgencyDbContext dbContext)
+        private void GenerateData(Document document, TravelAgencyDbContext dbContext)
         {
             var excursionsCount = dbContext.Excursions.Count();
 

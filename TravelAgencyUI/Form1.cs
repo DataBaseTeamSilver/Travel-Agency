@@ -6,6 +6,8 @@
     using System.IO;
     using System.IO.Compression;
     using System.Windows.Forms;
+    using TravelAgency.Data;
+    using TravelAgency.Logic;
 
     public partial class Form1 : Form
     {
@@ -58,6 +60,14 @@
                 this.dataGridView1.DataSource = ds.Tables[0];
                 this.dataGridView1.AutoSize = true;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TarvelAgencyDbContext dbContext = new TarvelAgencyDbContext(); 
+            PdfGenerator pdfGenerator = new PdfGenerator();
+
+            pdfGenerator.GeneratePdfReports(dbContext);
         }
     }
 }

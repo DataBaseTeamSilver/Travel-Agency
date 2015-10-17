@@ -6,6 +6,11 @@
     using System.IO;
     using System.IO.Compression;
     using System.Windows.Forms;
+    using Logic;
+    using Data;
+    using System.Linq;
+    using System.Collections.Generic;
+    using Model;
 
     public partial class Form1 : Form
     {
@@ -55,9 +60,33 @@
             {
                 DataSet ds = new DataSet();
                 oleDbDataAdapter.Fill(ds);
-                this.dataGridView1.DataSource = ds.Tables[0];
-                this.dataGridView1.AutoSize = true;
-            }
+                var destinations = new List<Destination>();
+                using (var reader = ds.CreateDataReader())
+                {
+                    while (reader.Read())
+                    {
+                        var destination = new Destination();
+                        destination.Country = reader["Country"].ToString();
+                        destination.Distance = double.Parse(reader["Distance"].ToString());
+                        destination.LuxuryFactor = int.Parse(reader["LuxuryFactor"].ToString());
+                        destinations.Add(destination);
+                    }
+                }
+                var db = new TravelAgencyDbContext();
+                foreach(var destination in destinations)
+                {
+                    db.Destinations.Add(destination);
+                }
+                db.SaveChanges();
+            }            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext(); 
+            PdfGenerator pdfGenerator = new PdfGenerator();
+   
+            pdfGenerator.GeneratePdfReports(dbContext);
         }
     }
 }

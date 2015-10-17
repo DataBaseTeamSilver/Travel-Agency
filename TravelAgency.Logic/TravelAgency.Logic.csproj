@@ -58,10 +58,21 @@
     <Compile Include="PdfGenerator.cs" />
     <Compile Include="ReadExcelFromZip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TravelAgency.Data\TravelAgency.Data.csproj">
+      <Project>{7c4b4e94-fe9a-483d-921d-822705cb00a2}</Project>
+      <Name>TravelAgency.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TravelAgency.Model\TravelAgency.Model.csproj">
+      <Project>{91e9869c-0492-4b7f-a8f2-e3d0a1b95199}</Project>
+      <Name>TravelAgency.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -16,7 +16,7 @@
 
         public void xmlGenerate(TravelAgencyDbContext dbContext)
         {
-            XmlTextWriter writer = new XmlTextWriter("TransportReport.xml", System.Text.Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter("../../../Data files/TransportReport.xml", System.Text.Encoding.UTF8);
             writer.WriteStartDocument(true);
             writer.Formatting = Formatting.Indented;
             writer.Indentation = 2;

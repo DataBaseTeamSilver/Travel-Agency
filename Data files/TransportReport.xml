@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Table>
+  <Excursion>
+    <Name>Sea Holiday</Name>
+    <StartDay>10.8.2015 г. 0:00:00</StartDay>
+    <EndDay>20.8.2015 г. 0:00:00</EndDay>
+    <Trasport>British Airways</Trasport>
+    <TransportType>Airplane</TransportType>
+  </Excursion>
+  <Excursion>
+    <Name>Surf in the Atlantic ocean</Name>
+    <StartDay>21.8.2015 г. 0:00:00</StartDay>
+    <EndDay>27.8.2015 г. 0:00:00</EndDay>
+    <Trasport>Turkish Airlines</Trasport>
+    <TransportType>Airplane</TransportType>
+  </Excursion>
+  <Excursion>
+    <Name>Sea Holiday</Name>
+    <StartDay>1.9.2015 г. 0:00:00</StartDay>
+    <EndDay>7.9.2015 г. 0:00:00</EndDay>
+    <Trasport>British Airways</Trasport>
+    <TransportType>Airplane</TransportType>
+  </Excursion>
+  <Excursion>
+    <Name>Visit the Pyramids</Name>
+    <StartDay>5.9.2015 г. 0:00:00</StartDay>
+    <EndDay>13.9.2015 г. 0:00:00</EndDay>
+    <Trasport>Qatar Airways</Trasport>
+    <TransportType>Airplane</TransportType>
+  </Excursion>
+  <Excursion>
+    <Name>All Inclusive drinking</Name>
+    <StartDay>11.9.2015 г. 0:00:00</StartDay>
+    <EndDay>20.9.2015 г. 0:00:00</EndDay>
+    <Trasport>C.H. Robinson</Trasport>
+    <TransportType>Bus</TransportType>
+  </Excursion>
+  <Excursion>
+    <Name>Visit cote d'azur</Name>
+    <StartDay>20.9.2015 г. 0:00:00</StartDay>
+    <EndDay>27.9.2015 г. 0:00:00</EndDay>
+    <Trasport>Kuehne + Nagel</Trasport>
+    <TransportType>Bus</TransportType>
+  </Excursion>
+  <Excursion>
+    <Name>Visit all Italian ports</Name>
+    <StartDay>14.9.2015 г. 0:00:00</StartDay>
+    <EndDay>24.9.2015 г. 0:00:00</EndDay>
+    <Trasport>Crystal Cruises</Trasport>
+    <TransportType>Ship</TransportType>
+  </Excursion>
+  <Excursion>
+    <Name>Visit Lisbon</Name>
+    <StartDay>23.9.2015 г. 0:00:00</StartDay>
+    <EndDay>30.9.2015 г. 0:00:00</EndDay>
+    <Trasport>Turkish Airlines</Trasport>
+    <TransportType>Airplane</TransportType>
+  </Excursion>
+</Table>

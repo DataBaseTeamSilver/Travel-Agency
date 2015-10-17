@@ -63,6 +63,7 @@
     <Compile Include="PdfGenerator.cs" />
     <Compile Include="ReadExcelFromZip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportGuide.cs" />
     <Compile Include="ReportTransport.cs" />
     <Compile Include="XMLGenerator.cs" />
   </ItemGroup>

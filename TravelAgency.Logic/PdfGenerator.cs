@@ -42,7 +42,20 @@
         {
             var excursionsCount = dbContext.Excursions.Count();
 
-            var excursions = dbContext.Excursions.ToList();
+            var excursions = dbContext
+                .Excursions
+                .Select(x => new ReportGuide()
+                {
+                    ExcName = x.Name,
+                    Destination = x.Destination.Country,
+                    Distance = x.Destination.Distance.ToString(),
+                    ClientCount = x.Clients,
+                    StartDate = x.StartDate,
+                    EndDate = x.EndDate,
+                    Guide = x.Guide.Name,
+                    Experience = x.Guide.Experience
+                })
+                .ToList();
 
             PdfPTable table = new PdfPTable(5);
 
@@ -56,13 +69,13 @@
             table.AddCell(this.CreateCell(new Phrase("Clients satisfaction"), true));
             table.AddCell(this.CreateCell(new Phrase("Duration in days"), true));
 
-            for (int i = 0; i < excursionsCount; i++)
+            for (int i = 0; i < excursions.Count; i++)
             {
-                table.AddCell(this.CreateCell(new Phrase(excursions[i].Name)));
-                table.AddCell(this.CreateCell(new Phrase(excursions[i].Destination.Country +
-                    " (" + excursions[i].Destination.Distance + "km)")));
-                table.AddCell(this.CreateCell(new Phrase(excursions[i].Clients.ToString())));
-                table.AddCell(this.CreateCell(new Phrase((excursions[i].Guide.Experience * 10).ToString() + "%")));
+                table.AddCell(this.CreateCell(new Phrase(excursions[i].ExcName)));
+                table.AddCell(this.CreateCell(new Phrase(excursions[i].Destination +
+                    " (" + excursions[i].Distance + "km)")));
+                table.AddCell(this.CreateCell(new Phrase(excursions[i].ClientCount.ToString())));
+                table.AddCell(this.CreateCell(new Phrase((excursions[i].Experience * 10).ToString() + "%")));
 
                 if (excursions[i].EndDate != null && excursions[i].StartDate != null)
                 {
@@ -77,7 +90,7 @@
                 }
             }
 
-            var allClients = excursions.Select(x => x.Clients).Sum();
+            var allClients = excursions.Select(x => x.ClientCount).Sum();
 
             table.AddCell(this.CreateCell(new Phrase("Total number of clients:"), false, 4));
             table.AddCell(this.CreateCell(new Phrase(allClients.ToString())));

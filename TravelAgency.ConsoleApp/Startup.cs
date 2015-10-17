@@ -18,6 +18,10 @@
 
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
             var db = new TravelAgencyDbContext();
+
+            //var k = new ReadFromSQLite();
+            //k.ReadDataFromSQLLite();
+
             /*
             var transport = new Transport
             {
@@ -58,7 +62,7 @@
                 insertCommand.Parameters.AddWithValue("@distance", item.Distance);
                 insertCommand.Parameters.AddWithValue("@luxuryFactor", item.LuxuryFactor);
                 insertCommand.ExecuteNonQuery();
-            }           
+            }
         }
     }
 }

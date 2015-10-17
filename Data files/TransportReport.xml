@@ -2,57 +2,71 @@
 <Table>
   <Excursion>
     <Name>Sea Holiday</Name>
-    <StartDay>10.8.2015 г. 0:00:00</StartDay>
-    <EndDay>20.8.2015 г. 0:00:00</EndDay>
+    <StartDay>8/10/2015 12:00:00 AM</StartDay>
+    <EndDay>8/20/2015 12:00:00 AM</EndDay>
     <Trasport>British Airways</Trasport>
     <TransportType>Airplane</TransportType>
   </Excursion>
   <Excursion>
+    <Name>Visit Monaco</Name>
+    <StartDay>8/20/2015 12:00:00 AM</StartDay>
+    <EndDay>8/24/2015 12:00:00 AM</EndDay>
+    <Trasport>Lufthansa</Trasport>
+    <TransportType>Airplane</TransportType>
+  </Excursion>
+  <Excursion>
+    <Name>Find the love in Paris</Name>
+    <StartDay>8/15/2015 12:00:00 AM</StartDay>
+    <EndDay>8/23/2015 12:00:00 AM</EndDay>
+    <Trasport>Lufthansa</Trasport>
+    <TransportType>Airplane</TransportType>
+  </Excursion>
+  <Excursion>
     <Name>Surf in the Atlantic ocean</Name>
-    <StartDay>21.8.2015 г. 0:00:00</StartDay>
-    <EndDay>27.8.2015 г. 0:00:00</EndDay>
+    <StartDay>8/21/2015 12:00:00 AM</StartDay>
+    <EndDay>8/27/2015 12:00:00 AM</EndDay>
     <Trasport>Turkish Airlines</Trasport>
     <TransportType>Airplane</TransportType>
   </Excursion>
   <Excursion>
     <Name>Sea Holiday</Name>
-    <StartDay>1.9.2015 г. 0:00:00</StartDay>
-    <EndDay>7.9.2015 г. 0:00:00</EndDay>
+    <StartDay>9/1/2015 12:00:00 AM</StartDay>
+    <EndDay>9/7/2015 12:00:00 AM</EndDay>
     <Trasport>British Airways</Trasport>
     <TransportType>Airplane</TransportType>
   </Excursion>
   <Excursion>
     <Name>Visit the Pyramids</Name>
-    <StartDay>5.9.2015 г. 0:00:00</StartDay>
-    <EndDay>13.9.2015 г. 0:00:00</EndDay>
+    <StartDay>9/5/2015 12:00:00 AM</StartDay>
+    <EndDay>9/13/2015 12:00:00 AM</EndDay>
     <Trasport>Qatar Airways</Trasport>
     <TransportType>Airplane</TransportType>
   </Excursion>
   <Excursion>
     <Name>All Inclusive drinking</Name>
-    <StartDay>11.9.2015 г. 0:00:00</StartDay>
-    <EndDay>20.9.2015 г. 0:00:00</EndDay>
+    <StartDay>9/11/2015 12:00:00 AM</StartDay>
+    <EndDay>9/20/2015 12:00:00 AM</EndDay>
     <Trasport>C.H. Robinson</Trasport>
     <TransportType>Bus</TransportType>
   </Excursion>
   <Excursion>
     <Name>Visit cote d'azur</Name>
-    <StartDay>20.9.2015 г. 0:00:00</StartDay>
-    <EndDay>27.9.2015 г. 0:00:00</EndDay>
+    <StartDay>9/20/2015 12:00:00 AM</StartDay>
+    <EndDay>9/27/2015 12:00:00 AM</EndDay>
     <Trasport>Kuehne + Nagel</Trasport>
     <TransportType>Bus</TransportType>
   </Excursion>
   <Excursion>
     <Name>Visit all Italian ports</Name>
-    <StartDay>14.9.2015 г. 0:00:00</StartDay>
-    <EndDay>24.9.2015 г. 0:00:00</EndDay>
+    <StartDay>9/14/2015 12:00:00 AM</StartDay>
+    <EndDay>9/24/2015 12:00:00 AM</EndDay>
     <Trasport>Crystal Cruises</Trasport>
     <TransportType>Ship</TransportType>
   </Excursion>
   <Excursion>
     <Name>Visit Lisbon</Name>
-    <StartDay>23.9.2015 г. 0:00:00</StartDay>
-    <EndDay>30.9.2015 г. 0:00:00</EndDay>
+    <StartDay>9/23/2015 12:00:00 AM</StartDay>
+    <EndDay>9/30/2015 12:00:00 AM</EndDay>
     <Trasport>Turkish Airlines</Trasport>
     <TransportType>Airplane</TransportType>
   </Excursion>

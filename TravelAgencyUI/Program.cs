@@ -2,6 +2,8 @@
 {
     using System;
     using System.Windows.Forms;
+    using Data;
+    using Model;
 
     public static class Program
     {
@@ -11,9 +13,10 @@
         [STAThread]
         public static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            // Application.EnableVisualStyles();
+            // Application.SetCompatibleTextRenderingDefault(false);
+            // Application.Run(new Form1());           
+
         }
     }
 }

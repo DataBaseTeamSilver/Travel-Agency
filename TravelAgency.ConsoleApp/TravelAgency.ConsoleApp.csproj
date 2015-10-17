@@ -4,16 +4,18 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7C4B4E94-FE9A-483D-921D-822705CB00A2}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{29934CE3-8335-427B-83E7-8EA5ED521DC4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TravelAgency.Data</RootNamespace>
-    <AssemblyName>TravelAgency.Data</AssemblyName>
+    <RootNamespace>TravelAgency.ConsoleApp</RootNamespace>
+    <AssemblyName>TravelAgency.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +25,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -50,14 +53,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TarvelAgencyDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TravelAgency.Data\TravelAgency.Data.csproj">
+      <Project>{7c4b4e94-fe9a-483d-921d-822705cb00a2}</Project>
+      <Name>TravelAgency.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TravelAgency.Logic\TravelAgency.Logic.csproj">
+      <Project>{11eb70ea-6bbd-4460-b1ed-23b587fda01b}</Project>
+      <Name>TravelAgency.Logic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TravelAgency.Model\TravelAgency.Model.csproj">
       <Project>{91e9869c-0492-4b7f-a8f2-e3d0a1b95199}</Project>
       <Name>TravelAgency.Model</Name>

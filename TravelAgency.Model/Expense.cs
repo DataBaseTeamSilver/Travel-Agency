@@ -8,8 +8,10 @@
         [Key, ForeignKey("Excursion")]
         public int ExpenseId { get; set; }
 
+        [Column(TypeName = "Money")]
         public decimal HotelExpenses { get; set; }
 
+        [Column(TypeName = "Money")]
         public decimal TransportExpenses { get; set; }
 
         public virtual Excursion Excursion { get; set; }

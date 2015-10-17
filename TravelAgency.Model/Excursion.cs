@@ -2,13 +2,14 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Excursion
     {
         [Key]
         public int ExcursionId { get; set; }
 
-        [MaxLength(50)]
+        [MaxLength(100)]
         [Required]
         public string Name { get; set; }
                 
@@ -26,6 +27,7 @@
 
         [Required]
         [Range(100, 10000)]
+        [Column(TypeName = "Money")]
         public decimal PricePerClient { get; set; }
 
         [Required]
@@ -38,7 +40,7 @@
         
         public virtual Guide Guide { get; set; }
 
-        public int ExpenseId { get; set; }
+        public int? ExpenseId { get; set; }
 
         public virtual Expense Expense { get; set; }
 

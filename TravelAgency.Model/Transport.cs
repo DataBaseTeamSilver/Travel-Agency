@@ -15,6 +15,7 @@
         public int TransportId { get; set; }
 
         [Required]
+        [MaxLength(50)]
         public string CompanyName { get; set; }
 
         public TransportType Type { get; set; }

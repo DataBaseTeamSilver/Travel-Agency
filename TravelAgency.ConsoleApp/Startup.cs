@@ -1,13 +1,16 @@
 ﻿namespace TravelAgency.ConsoleApp
 {
+    using System.Data.Entity;
     using Data;
+    using Data.Migrations;
     using Model;
 
     public class Startup
     {
         public static void Main()
         {
-            var db = new TarvelAgencyDbContext();
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
+            var db = new TravelAgencyDbContext();
 
             var transport = new Transport
             {
@@ -16,6 +19,7 @@
             };
 
             db.Transports.Add(transport);
+
             db.SaveChanges();
         }
     }

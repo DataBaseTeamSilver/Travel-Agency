@@ -1,13 +1,12 @@
 ﻿namespace TravelAgency.Data
 {
     using System.Data.Entity;
-
     using Model;
 
-    public class TarvelAgencyDbContext : DbContext
+    public class TravelAgencyDbContext : DbContext
     {
-        public TarvelAgencyDbContext()
-            : base("TarvelAgencyDb")
+        public TravelAgencyDbContext()
+            : base("TravelAgencyDb")
         {
         }
 

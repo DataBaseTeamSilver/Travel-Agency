@@ -1,6 +1,7 @@
 ﻿namespace TravelAgency.Model
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     public class Destination
     {
@@ -13,6 +14,7 @@
 
         public int DestinationId { get; set; }
 
+        [MaxLength(75)]
         public string Country { get; set; }
 
         public double Distance { get; set; }

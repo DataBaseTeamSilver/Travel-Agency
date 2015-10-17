@@ -88,5 +88,18 @@
    
             pdfGenerator.GeneratePdfReports(dbContext);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+            XMLGenerator xmlGenerator = new XMLGenerator();
+
+            xmlGenerator.xmlGenerate(dbContext);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,8 +1,10 @@
 ﻿namespace TravelAgency.UI
 {
     using System;
+    using System.Data.Entity;
     using System.Windows.Forms;
-    using XMLGenerator;
+    using Data;
+    using Data.Migrations;
 
     public static class Program
     {
@@ -12,10 +14,10 @@
         [STAThread]
         public static void Main()
         {
-            ////Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
-            ////var db = new TravelAgencyDbContext();
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
+            var db = new TravelAgencyDbContext();
 
-            ////db.SaveChanges();
+            db.SaveChanges();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

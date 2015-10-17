@@ -1,37 +1,68 @@
-﻿namespace XMLGenerator
+﻿namespace TravelAgency.Logic
 {
-    using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Xml;
+    using TravelAgency.Data;
 
     public class XMLGenerator
     {
-        public void xmlGenerate(object sender, EventArgs e)
+        //private TravelAgencyDbContext dbContext;
+        //
+        //public XMLGenerator(TravelAgencyDbContext dbContext)
+        //{
+        //    this.dbContext = dbContext;
+        //}
+
+        public void xmlGenerate(TravelAgencyDbContext dbContext)
         {
-            XmlTextWriter writer = new XmlTextWriter("exDest.xml", System.Text.Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter("TransportReport.xml", System.Text.Encoding.UTF8);
             writer.WriteStartDocument(true);
             writer.Formatting = Formatting.Indented;
             writer.Indentation = 2;
             writer.WriteStartElement("Table");
-            createNode("1", "test 1", "1000", writer);
-            createNode("2", "test 2", "2000", writer);
-            createNode("3", "test 3", "3000", writer);
-            createNode("4", "test 4", "4000", writer);
+            var data = this.GetData(dbContext);
+            foreach(var report in data)
+            {
+                createNode(report, writer);
+            }
+
             writer.WriteEndElement();
             writer.WriteEndDocument();
             writer.Close();
         }
 
-        public void createNode(string pID, string pName, string pPrice, XmlTextWriter writer)
+        private IEnumerable<ReportTransport> GetData(TravelAgencyDbContext dbContext)
+        {
+            var excursions = dbContext.Excursions.Select(x => new ReportTransport()
+            {
+                ExcName = x.Name,
+                StartDate = x.StartDate,
+                EndDate = x.EndDate,
+                CompanyName = x.Transport.CompanyName,
+                TransportType = x.Transport.Type
+            }).ToList();
+
+            return excursions;
+        }
+
+        private void createNode(ReportTransport report, XmlTextWriter writer)
         {
             writer.WriteStartElement("Excursion");
             writer.WriteStartElement("Name");
-            writer.WriteString(pID);
+            writer.WriteString(report.ExcName);
             writer.WriteEndElement();
-            writer.WriteStartElement("Clients Count");
-            writer.WriteString(pName);
+            writer.WriteStartElement("StartDay");
+            writer.WriteString(report.StartDate.ToString());
             writer.WriteEndElement();
-            writer.WriteStartElement("Transport");
-            writer.WriteString(pPrice);
+            writer.WriteStartElement("EndDay");
+            writer.WriteString(report.EndDate.ToString());
+            writer.WriteEndElement();
+            writer.WriteStartElement("Trasport");
+            writer.WriteString(report.CompanyName);
+            writer.WriteEndElement();
+            writer.WriteStartElement("TransportType");
+            writer.WriteString(report.TransportType.ToString());
             writer.WriteEndElement();
             writer.WriteEndElement();
         }

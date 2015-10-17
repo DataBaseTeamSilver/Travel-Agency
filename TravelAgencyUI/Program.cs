@@ -3,8 +3,15 @@
     using System;
     using System.Windows.Forms;
     using Data;
+<<<<<<< HEAD
     using TravelAgencyUI;
     using System.Linq;
+=======
+    using Model;
+    using System.Data.Entity;
+    using Data.Migrations;
+    using XMLGenerator;
+>>>>>>> origin/master
 
     public static class Program
     {

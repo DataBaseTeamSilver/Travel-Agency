@@ -8,7 +8,7 @@ namespace TravelAgency.Data.Migrations
         {
             this.AutomaticMigrationsEnabled = true;
             this.AutomaticMigrationDataLossAllowed = true;
-            this.ContextKey = "TravelAgency.Data.TarvelAgencyDbContext";
+            this.ContextKey = "TravelAgency.Data.TravelAgencyDbContext";
         }
 
         protected override void Seed(TravelAgencyDbContext context)

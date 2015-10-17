@@ -77,7 +77,7 @@
                 }
             }
 
-            var allClients = excursions.Select(x => x.Clients).Count();
+            var allClients = excursions.Select(x => x.Clients).Sum();
 
             table.AddCell(this.CreateCell(new Phrase("Total number of clients:"), false, 4));
             table.AddCell(this.CreateCell(new Phrase(allClients.ToString())));

@@ -8,11 +8,15 @@
     using System;
     using System.Linq;
     using System.Collections.Generic;
+    using Logic;
 
     public class Startup
     {
         public static void Main()
         {
+            var test = new JsonExporter();
+            test.GenerateJsonFiles();
+
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
             var db = new TravelAgencyDbContext();
             /*
@@ -25,7 +29,7 @@
             db.Transports.Add(transport);
 
             db.SaveChanges();
-            */
+            
             var destinations = db.Destinations.ToList();
 
             Console.WriteLine(destinations.Count);
@@ -39,6 +43,7 @@
                 dbConn.Open();
                 WritteDestinationsToExel(dbConn, destinations);
             }   
+            */
         }
 
         private static void WritteDestinationsToExel(OleDbConnection dbConn, List<Destination> destinations)

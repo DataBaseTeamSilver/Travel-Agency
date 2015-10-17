@@ -64,7 +64,7 @@
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TarvelAgencyDbContext dbContext = new TarvelAgencyDbContext(); 
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext(); 
             PdfGenerator pdfGenerator = new PdfGenerator();
 
             pdfGenerator.GeneratePdfReports(dbContext);

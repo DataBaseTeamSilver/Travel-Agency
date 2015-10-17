@@ -9,7 +9,7 @@
         [Key]
         public int ExcursionId { get; set; }
 
-        [MaxLength(50)]
+        [MaxLength(100)]
         [Required]
         public string Name { get; set; }
                 
@@ -40,7 +40,7 @@
         
         public virtual Guide Guide { get; set; }
 
-        public int ExpenseId { get; set; }
+        public int? ExpenseId { get; set; }
 
         public virtual Expense Expense { get; set; }
 

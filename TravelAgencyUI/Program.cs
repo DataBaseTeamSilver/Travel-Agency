@@ -15,8 +15,8 @@
         [STAThread]
         public static void Main()
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TarvelAgencyDbContext, Configuration>());
-            var db = new TarvelAgencyDbContext();
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
+            var db = new TravelAgencyDbContext();
 
             db.SaveChanges();
 

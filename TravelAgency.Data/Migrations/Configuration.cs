@@ -2,7 +2,7 @@ namespace TravelAgency.Data.Migrations
 {
     using System.Data.Entity.Migrations;
 
-    public sealed class Configuration : DbMigrationsConfiguration<TarvelAgencyDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<TravelAgencyDbContext>
     {
         public Configuration()
         {
@@ -11,7 +11,7 @@ namespace TravelAgency.Data.Migrations
             this.ContextKey = "TravelAgency.Data.TarvelAgencyDbContext";
         }
 
-        protected override void Seed(TarvelAgencyDbContext context)
+        protected override void Seed(TravelAgencyDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

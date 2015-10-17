@@ -33,6 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.xmlGenerate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,8 +56,17 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(31, 79);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(120, 115);
+            this.dataGridView1.Size = new System.Drawing.Size(212, 162);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // xmlGenerate
+            // 
+            this.xmlGenerate.Location = new System.Drawing.Point(449, 238);
+            this.xmlGenerate.Name = "xmlGenerate";
+            this.xmlGenerate.Size = new System.Drawing.Size(75, 23);
+            this.xmlGenerate.TabIndex = 2;
+            this.xmlGenerate.Text = "xmlGenerate";
+            this.xmlGenerate.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -64,7 +74,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(453, 262);
+            this.ClientSize = new System.Drawing.Size(567, 320);
+            this.Controls.Add(this.xmlGenerate);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
@@ -78,5 +89,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button xmlGenerate;
     }
 }

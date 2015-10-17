@@ -6,6 +6,7 @@
     using Model;
     using System.Data.Entity;
     using Data.Migrations;
+    using XMLGenerator;
 
     public static class Program
     {

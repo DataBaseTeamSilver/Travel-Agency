@@ -43,6 +43,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.GenerateDataFromXml = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -102,6 +103,16 @@
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 7;
             // 
+            // GenerateDataFromXml
+            // 
+            this.GenerateDataFromXml.Location = new System.Drawing.Point(296, 82);
+            this.GenerateDataFromXml.Name = "GenerateDataFromXml";
+            this.GenerateDataFromXml.Size = new System.Drawing.Size(75, 40);
+            this.GenerateDataFromXml.TabIndex = 8;
+            this.GenerateDataFromXml.Text = "CreateDataFromXml";
+            this.GenerateDataFromXml.UseVisualStyleBackColor = true;
+            this.GenerateDataFromXml.Click += new System.EventHandler(this.GenerateDataFromXmlButtonHandler);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +120,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(453, 262);
+            this.Controls.Add(this.GenerateDataFromXml);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -126,5 +138,6 @@
 
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button GenerateDataFromXml;
     }
 }

@@ -55,6 +55,12 @@
             xmlGenerator.XmlGenerate(dbContext, cb1Value, cb2Value, cb3Value);
         }
 
+        private void GenerateDataFromXmlButtonHandler(object sender, EventArgs e)
+        {
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+            ReadFromXml xmlReader = new ReadFromXml();
 
+            xmlReader.ImportFromXmlIntoSql(dbContext);
+        }
     }
 }

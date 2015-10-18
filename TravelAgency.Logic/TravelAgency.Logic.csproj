@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JsonExporter.cs" />
+    <Compile Include="MongoDBImporter.cs" />
     <Compile Include="PdfGenerator.cs" />
     <Compile Include="ReadExcelFromZip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

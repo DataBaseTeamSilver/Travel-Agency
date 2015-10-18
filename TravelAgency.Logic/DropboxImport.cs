@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TravelAgency.Data;
-using TravelAgency.Model;
-
-namespace TravelAgency.Logic
+﻿namespace TravelAgency.Logic
 {
-    public class DropboxInport
+    using System.Collections.Generic;
+    using System.Linq;
+    using TravelAgency.Data;
+
+    public class DropboxImport
     {
         private TravelAgencyDbContext dbContext;
 
-        public DropboxInport(TravelAgencyDbContext dbContext)
+        public DropboxImport(TravelAgencyDbContext dbContext)
         {
             this.dbContext = dbContext;
         }

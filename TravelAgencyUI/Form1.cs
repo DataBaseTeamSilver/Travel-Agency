@@ -17,7 +17,7 @@
         private void FillDropbox()
         {
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
-            DropboxInport inport = new DropboxInport(dbContext);
+            DropboxImport inport = new DropboxImport(dbContext);
 
             this.comboBox1.DataSource = inport.GetDestination();
             this.comboBox2.DataSource = inport.GetGuides();

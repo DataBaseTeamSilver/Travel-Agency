@@ -74,7 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DropboxInport.cs" />
+    <Compile Include="DropboxImport.cs" />
     <Compile Include="JsonExporter.cs" />
     <Compile Include="MongoDBGenerator.cs" />
     <Compile Include="MongoDBImporter.cs" />
@@ -100,9 +100,6 @@
       <Project>{91e9869c-0492-4b7f-a8f2-e3d0a1b95199}</Project>
       <Name>TravelAgency.Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Guides.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

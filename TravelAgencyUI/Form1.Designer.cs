@@ -7,6 +7,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button GenerateDataFromXml;
 
         /// <summary>
         /// Required designer variable.
@@ -133,11 +136,6 @@
 
         }
 
-
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button GenerateDataFromXml;
     }
 }

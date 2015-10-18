@@ -13,11 +13,14 @@
     {
         public static void Main()
         {
-            var test = new JsonExporter();
-            test.GenerateJsonFiles();
+            //var test = new JsonExporter();
+            //test.GenerateJsonFiles();
 
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
             var db = new TravelAgencyDbContext();
+            //var importer = new MongoDBImporter();
+            //importer.ImportData(db);
+            //db.SaveChanges();
 
             //var k = new ReadFromSQLite();
             //k.ReadDataFromSQLLite();

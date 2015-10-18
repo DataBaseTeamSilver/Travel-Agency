@@ -17,8 +17,7 @@
         private const string DatabaseHost = "mongodb://127.0.0.1";
         private const string DatabaseName = "Transports";
 
-
-        public void ImportData(TravelAgencyDbContext dbContext)
+        public void ImportData(TravelAgencyDbContext ctx)
         {
             var db = this.GetDatabase(DatabaseName, DatabaseHost);
             var transportsDocuments = db.GetCollection<BsonDocument>("Transports");
@@ -33,7 +32,7 @@
 
             var uniqueTransportNames = new HashSet<string>();
 
-            var transportsInDB = dbContext
+            var transportsInDB = ctx
                 .Transports
                 .Select(x => x.CompanyName)
                 .ToList();
@@ -55,10 +54,11 @@
                         Type = (TransportType)currentTransport.Type
                     };
 
-                    dbContext.Transports.Add(transportToAdd);
+                    ctx.Transports.Add(transportToAdd);
                 }
             }
-            dbContext.SaveChanges();
+
+            ctx.SaveChanges();
         }
 
         private MongoDatabase GetDatabase(string name, string fromHost)

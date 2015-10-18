@@ -4,12 +4,25 @@
     using System.Windows.Forms;
     using Data;
     using Logic;
+    using Model;
 
     public partial class Form1 : Form
     {
         public Form1()
         {
             this.InitializeComponent();
+            this.FillDropbox();
+        }
+
+        private void FillDropbox()
+        {
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+            DropboxInport inport = new DropboxInport(dbContext);
+
+            this.comboBox1.DataSource = inport.GetDestination();
+            this.comboBox2.DataSource = inport.GetGuides();
+            this.comboBox3.DataSource = inport.GetTransports();
+            //this.comboBox1.AutoCompleteSource = listToInport;
         }
 
         private void SaveDataFromExcelToSQL(object sender, EventArgs e)
@@ -36,7 +49,12 @@
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
             XMLGenerator xmlGenerator = new XMLGenerator();
 
-            xmlGenerator.XmlGenerate(dbContext);
+            var cb1Value = this.comboBox1.SelectedValue.ToString();
+            var cb2Value = this.comboBox2.SelectedValue.ToString();
+            var cb3Value = this.comboBox3.SelectedValue.ToString();
+            xmlGenerator.XmlGenerate(dbContext, cb1Value, cb2Value, cb3Value);
         }
+
+
     }
 }

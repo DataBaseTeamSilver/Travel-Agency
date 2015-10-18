@@ -7,14 +7,14 @@
 
     public class XMLGenerator
     {
-        public void XmlGenerate(TravelAgencyDbContext dbContext)
+        public void XmlGenerate(TravelAgencyDbContext dbContext, string destination, string guide, string transport)
         {
             XmlTextWriter writer = new XmlTextWriter("../../../Data files/TransportReport.xml", System.Text.Encoding.UTF8);
             writer.WriteStartDocument(true);
             writer.Formatting = Formatting.Indented;
             writer.Indentation = 2;
             writer.WriteStartElement("Table");
-            var data = this.GetData(dbContext);
+            var data = this.GetData(dbContext, destination, guide, transport);
 
             foreach (var report in data)
             {
@@ -26,16 +26,20 @@
             writer.Close();
         }
 
-        private IEnumerable<ReportTransport> GetData(TravelAgencyDbContext dbContext)
+        private IEnumerable<ReportTransport> GetData(TravelAgencyDbContext dbContext, string destination, string guide, string transport)
         {
-            var excursions = dbContext.Excursions.Select(x => new ReportTransport()
-            {
-                ExcName = x.Name,
-                StartDate = x.StartDate,
-                EndDate = x.EndDate,
-                CompanyName = x.Transport.CompanyName,
-                TransportType = x.Transport.Type
-            }).ToList();
+            var excursions = dbContext
+                .Excursions
+                .Where(s => s.Transport.CompanyName == transport)
+                .Select(x => new ReportTransport()
+                {
+                    ExcName = x.Name,
+                    StartDate = x.StartDate,
+                    EndDate = x.EndDate,
+                    CompanyName = x.Transport.CompanyName,
+                    TransportType = x.Transport.Type
+                })
+                .ToList();
 
             return excursions;
         }

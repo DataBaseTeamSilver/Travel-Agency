@@ -2,7 +2,6 @@
 {
     using System.Collections.Generic;
     using System.Xml;
-
     using TravelAgency.Data;
     using TravelAgency.Model;
 
@@ -15,9 +14,12 @@
 
             XmlElement rootnode = document.DocumentElement;
 
-            var newGuides = ReadData(rootnode.GetElementsByTagName("guide"));
+            var newGuides = this.ReadData(rootnode.GetElementsByTagName("guide"));
 
-            InputNewGuides(dbContext, newGuides);
+            this.InputNewGuides(dbContext, newGuides);
+
+            var mongoGenerator = new MongoDBGenerator();
+            mongoGenerator.InputGuides(newGuides);
         }
 
         private IEnumerable<Guide> ReadData(XmlNodeList nodeList)

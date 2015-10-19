@@ -10,6 +10,7 @@
     using MongoDB.Driver;
     using MongoDB.Driver.Builders;
     using TravelAgency.Data;
+    using TravelAgency.Model;
 
     public class MongoDBGenerator
     {
@@ -41,6 +42,21 @@
             this.InsertData("Cunard", 2);
             this.InsertData("Silversea Cruises", 2);
             this.InsertData("Seabourn", 2);
+        }
+
+        public void InputGuides(IEnumerable<Guide> newGuides)
+        {
+            var db = this.GetDatabase(DatabaseName, DatabaseHost);
+            var guides = db.GetCollection<BsonDocument>("Guides");
+            foreach (var guide in newGuides)
+            {
+                guides.Insert(new BsonDocument
+                { 
+                    { "Id", guide.GuideId },
+                    { "Name", guide.Name },
+                    { "Experience", guide.Experience }
+                });
+            }
         }
 
         private MongoDatabase GetDatabase(string name, string fromHost)

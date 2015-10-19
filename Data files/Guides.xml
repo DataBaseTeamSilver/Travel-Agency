@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<guidesList>
+  <guide>
+    <name>Scarlett Johansson</name>
+    <skill>7</skill>
+  </guide>
+  <guide>
+    <name>Dwayn Johnson</name>
+    <skill>4</skill>
+  </guide>
+  <guide>
+    <name>Tim Burton</name>
+    <skill>4</skill>
+  </guide>
+  <guide>
+    <name>Emma Stone</name>
+    <skill>8</skill>
+  </guide>
+  <guide>
+    <name>Jim Carrey</name>
+    <skill>6</skill>
+  </guide>
+  <guide>
+    <name>John Cussack</name>
+    <skill>9</skill>
+  </guide>
+  <guide>
+    <name>John Travolta</name>
+    <skill>10</skill>
+  </guide>
+  <guide>
+    <name>Nicolas Cage</name>
+    <skill>5</skill>
+  </guide>
+  <guide>
+    <name>Nicole Kidman</name>
+    <skill>3</skill>
+  </guide>
+</guidesList>

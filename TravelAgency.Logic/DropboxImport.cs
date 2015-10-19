@@ -4,11 +4,11 @@
     using System.Linq;
     using TravelAgency.Data;
 
-    public class DropboxInport
+    public class DropboxImport
     {
         private TravelAgencyDbContext dbContext;
 
-        public DropboxInport(TravelAgencyDbContext dbContext)
+        public DropboxImport(TravelAgencyDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
@@ -26,7 +26,7 @@
         public List<string> GetTransports()
         {
             var result = this.dbContext.Transports.Select(x => x.CompanyName).ToList();
-            result.Insert(0, string.Empty);
+            result.Insert(0, "*");
             return result;
         }
     }

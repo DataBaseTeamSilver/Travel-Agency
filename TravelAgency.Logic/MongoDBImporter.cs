@@ -15,7 +15,7 @@
     public class MongoDBImporter
     {
         private const string DatabaseHost = "mongodb://127.0.0.1";
-        private const string DatabaseName = "Transports";
+        private const string DatabaseName = "TravelAgency";
 
         public void ImportData(TravelAgencyDbContext ctx)
         {

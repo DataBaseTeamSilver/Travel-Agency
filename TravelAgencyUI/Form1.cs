@@ -17,7 +17,7 @@
         private void FillDropbox()
         {
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
-            DropboxInport inport = new DropboxInport(dbContext);
+            DropboxImport inport = new DropboxImport(dbContext);
 
             this.comboBox1.DataSource = inport.GetDestination();
             this.comboBox2.DataSource = inport.GetGuides();
@@ -25,7 +25,7 @@
             //this.comboBox1.AutoCompleteSource = listToInport;
         }
 
-        private void SaveDataFromExcelToSQL(object sender, EventArgs e)
+        private void SaveDataFromExcelToSQLButtonHandler(object sender, EventArgs e)
         {
             DialogResult result = this.openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
@@ -36,7 +36,7 @@
             }
         }
 
-        private void Button2Click(object sender, EventArgs e)
+        private void GeneratePdfButtonHandler(object sender, EventArgs e)
         {
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
             PdfGenerator pdfGenerator = new PdfGenerator();
@@ -44,7 +44,7 @@
             pdfGenerator.GeneratePdfReports(dbContext);
         }
 
-        private void Button3Click(object sender, EventArgs e)
+        private void GenerateXmlButtonHandler(object sender, EventArgs e)
         {
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
             XMLGenerator xmlGenerator = new XMLGenerator();
@@ -55,6 +55,12 @@
             xmlGenerator.XmlGenerate(dbContext, cb1Value, cb2Value, cb3Value);
         }
 
+        private void GenerateDataFromXmlButtonHandler(object sender, EventArgs e)
+        {
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+            ReadFromXml xmlReader = new ReadFromXml();
 
+            xmlReader.ImportFromXmlIntoSql(dbContext);
+        }
     }
 }

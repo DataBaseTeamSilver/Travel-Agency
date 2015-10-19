@@ -47,9 +47,10 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.GenerateDataFromXml = new System.Windows.Forms.Button();
+            this.XmlToMongoDB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // SaveDataFromExcelToSQLButtonHandler
+            // button1
             // 
             this.button1.Location = new System.Drawing.Point(31, 29);
             this.button1.Name = "button1";
@@ -59,7 +60,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.SaveDataFromExcelToSQLButtonHandler);
             // 
-            // GeneratePdfButtonHandler
+            // button2
             // 
             this.button2.Location = new System.Drawing.Point(185, 33);
             this.button2.Name = "button2";
@@ -69,7 +70,7 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.GeneratePdfButtonHandler);
             // 
-            // GenerateXmlButtonHandler
+            // button3
             // 
             this.button3.Location = new System.Drawing.Point(296, 33);
             this.button3.Name = "button3";
@@ -114,7 +115,17 @@
             this.GenerateDataFromXml.TabIndex = 8;
             this.GenerateDataFromXml.Text = "CreateDataFromXml";
             this.GenerateDataFromXml.UseVisualStyleBackColor = true;
-            this.GenerateDataFromXml.Click += new System.EventHandler(this.GenerateDataFromXmlButtonHandler);
+            this.GenerateDataFromXml.Click += new System.EventHandler(this.GenerateDataFromXmlToSQLButtonHandler);
+            // 
+            // XmlToMongoDB
+            // 
+            this.XmlToMongoDB.Location = new System.Drawing.Point(305, 141);
+            this.XmlToMongoDB.Name = "XmlToMongoDB";
+            this.XmlToMongoDB.Size = new System.Drawing.Size(75, 23);
+            this.XmlToMongoDB.TabIndex = 9;
+            this.XmlToMongoDB.Text = "XmlToMongoDB";
+            this.XmlToMongoDB.UseVisualStyleBackColor = true;
+            this.XmlToMongoDB.Click += new System.EventHandler(this.GenerateDataFromXmlToSQLButtonHandler);
             // 
             // Form1
             // 
@@ -123,6 +134,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(453, 262);
+            this.Controls.Add(this.XmlToMongoDB);
             this.Controls.Add(this.GenerateDataFromXml);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
@@ -137,5 +149,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button XmlToMongoDB;
     }
 }

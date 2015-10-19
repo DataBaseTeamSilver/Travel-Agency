@@ -2,24 +2,24 @@
 {
     using System.Collections.Generic;
     using System.Xml;
+
     using TravelAgency.Data;
+    using TravelAgency.Logic.ImportData;
     using TravelAgency.Model;
 
     public class ReadFromXml
     {
-        public void ImportFromXmlIntoSql(TravelAgencyDbContext dbContext)
+        public IEnumerable<Guide> ImportFromXmlIntoSql(string path)
         {
             XmlDocument document = new XmlDocument();
-            document.Load("../../../Data files/Guides.xml");
+            document.Load(path);
 
             XmlElement rootnode = document.DocumentElement;
 
-            var newGuides = this.ReadData(rootnode.GetElementsByTagName("guide"));
+            return this.ReadData(rootnode.GetElementsByTagName("guide"));
 
-            this.InputNewGuides(dbContext, newGuides);
-
-            var mongoGenerator = new MongoDBGenerator();
-            mongoGenerator.InputGuides(newGuides);
+            //var mongoGenerator = new MongoDBGenerator();
+            //mongoGenerator.InputGuides(newGuides);
         }
 
         private IEnumerable<Guide> ReadData(XmlNodeList nodeList)
@@ -35,16 +35,6 @@
             }
 
             return albums;
-        }
-
-        private void InputNewGuides(TravelAgencyDbContext dbContext, IEnumerable<Guide> newGuides)
-        {
-            foreach (var guide in newGuides)
-            {
-                dbContext.Guides.Add(guide);
-            }
-
-            dbContext.SaveChanges();
         }
     }
 }

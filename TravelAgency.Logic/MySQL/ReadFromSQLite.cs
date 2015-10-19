@@ -16,7 +16,6 @@
             SQLiteDataReader reader = command1.ExecuteReader();
             var resultExpenses = new Dictionary<int?, int>();
 
-
             while (reader.Read())
             {
                 var expenseId = (int?)reader["ExpenseId"];
@@ -25,6 +24,7 @@
                 {
                     resultExpenses.Add(expenseId, expenseAmount);
                 }
+
                 Console.WriteLine("ID - {0} Hotel - {1}, Transport - {2}", reader["ExpensesId"], reader["HotelExpenses"], reader["TransportExpenses"]);
             }
 

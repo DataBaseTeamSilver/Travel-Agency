@@ -8,10 +8,12 @@
     public class ExcelReport
     {
         private ReadFromSQLite sqliteReader;
+
         public ExcelReport(ReadFromSQLite reader)
         {
             this.sqliteReader = reader;
         }
+
         public string[,] GenerateReports(TravelAgencyDbContext db)
         {
             using (var reportsContext = new ReportsFluentModel())
@@ -19,7 +21,6 @@
                 var schemaHandler = reportsContext.GetSchemaHandler();
 
                 var sqliteReports = this.sqliteReader.GetData();
-
 
                 var currentReports = reportsContext.GetAll<Report>().Select(x => new
                 {

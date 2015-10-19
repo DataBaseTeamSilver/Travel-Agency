@@ -6,7 +6,7 @@
 
     public abstract class ImportToSQL
     {
-        private TravelAgencyDbContext db = new TravelAgencyDbContext();
+        protected TravelAgencyDbContext db = new TravelAgencyDbContext();
 
         public abstract void ImportDataToSQL(IEnumerable<object> dataType);
     }

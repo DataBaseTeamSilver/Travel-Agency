@@ -17,8 +17,8 @@
 
             //var db = new TravelAgencyDbContext();
 
-            var reader = new ReadFromSQLite();
-            reader.ReadDataFromSQLLite();
+            //var reader = new ReadFromSQLite();
+            //reader.ReadDataFromSQLLite();
 
             //var test = new CreateSampleExcursions();
             //test.AddRandomNumberOfExcursion(200);

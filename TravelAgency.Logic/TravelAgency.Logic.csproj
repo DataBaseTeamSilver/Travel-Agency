@@ -100,6 +100,10 @@
     <Compile Include="JsonExporter.cs" />
     <Compile Include="MongoDBGenerator.cs" />
     <Compile Include="MongoDBImporter.cs" />
+    <Compile Include="MySQL\MySqlImporter.cs" />
+    <Compile Include="MySQL\Report.cs" />
+    <Compile Include="MySQL\ReportsFluentModel.cs" />
+    <Compile Include="MySQL\ReportsFluentSource.cs" />
     <Compile Include="PdfGenerator.cs" />
     <Compile Include="ReadExcelFromZip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

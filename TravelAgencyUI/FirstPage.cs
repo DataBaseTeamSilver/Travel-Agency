@@ -1,10 +1,14 @@
 ﻿namespace TravelAgencyUI
 {
+    using System;
+    using System.Collections.Generic;
     using System.Windows.Forms;
     using TravelAgency.Logic;
+    using TravelAgency.Model;
 
     public partial class FirstPage : Form
     {
+        public List<Destination> destinations = new List<Destination>();
         public FirstPage()
         {
             this.InitializeComponent();
@@ -21,8 +25,31 @@
             {
                 var path = this.openFileDialog1.InitialDirectory + this.openFileDialog1.FileName;
                 ReadExcelFromZip excelReader = new ReadExcelFromZip();
-                excelReader.SelectExcelFilesFromZip(path);
+                destinations = excelReader.SelectExcelFilesFromZip(path);
+                HideAllButtons();
+                ShowImportButtons();
             }
+        }
+
+        private void ShowImportButtons()
+        {
+            button7.Visible = true;
+        }
+
+        private void HideAllButtons()
+        {
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            button4.Visible = false;
+            button5.Visible = false;
+            button6.Visible = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            var import = new ImportToSQL();
+            import.ImportFromExcelToSQL(destinations);
         }
     }
 }

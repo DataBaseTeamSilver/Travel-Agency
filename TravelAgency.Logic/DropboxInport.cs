@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TravelAgency.Data;
-using TravelAgency.Model;
-
-namespace TravelAgency.Logic
+﻿namespace TravelAgency.Logic
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using TravelAgency.Data;
+
     public class DropboxInport
     {
         private TravelAgencyDbContext dbContext;
@@ -30,7 +26,7 @@ namespace TravelAgency.Logic
         public List<string> GetTransports()
         {
             var result = this.dbContext.Transports.Select(x => x.CompanyName).ToList();
-            result.Insert(0, "*");
+            result.Insert(0, string.Empty);
             return result;
         }
     }

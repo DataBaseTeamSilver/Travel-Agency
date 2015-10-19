@@ -85,7 +85,8 @@
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            HideLoadDataButtons();
+            button8.Visible = true;
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -116,6 +117,14 @@
             var travelAgency = new TravelAgencyDbContext();
             var transports = new MongoDBImporter();
             transports.ImportData(travelAgency);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+            PdfGenerator pdfGenerator = new PdfGenerator();
+
+            pdfGenerator.GeneratePdfReports(dbContext);
         }
     }
 }

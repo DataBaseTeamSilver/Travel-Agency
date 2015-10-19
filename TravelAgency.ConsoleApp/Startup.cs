@@ -13,12 +13,15 @@
     {
         public static void Main()
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
 
-            var db = new TravelAgencyDbContext();
+            //var db = new TravelAgencyDbContext();
 
-            var test = new CreateSampleExcursions();
-            test.AddRandomNumberOfExcursion(200);
+            var reader = new ReadFromSQLite();
+            reader.ReadDataFromSQLLite();
+
+            //var test = new CreateSampleExcursions();
+            //test.AddRandomNumberOfExcursion(200);
         }        
     }
 }

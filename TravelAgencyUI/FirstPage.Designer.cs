@@ -172,6 +172,7 @@
             this.button8.Text = "button8";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Visible = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 

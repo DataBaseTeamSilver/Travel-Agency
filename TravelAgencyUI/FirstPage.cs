@@ -32,10 +32,8 @@
             //this.comboBox1.AutoCompleteSource = listToInport;
         }
 
-
         private void Button4Click(object sender, System.EventArgs e)
         {
-
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
             ReadFromXml xmlReader = new ReadFromXml();
             this.guides = xmlReader.ImportFromXmlIntoSql("../../../Data files/Guides.xml");
@@ -63,7 +61,6 @@
             label1.Visible = true;
         }
 
-
         private void HideLoadDataButtons()
         {
             button1.Visible = false;
@@ -83,7 +80,6 @@
 
         private void FirstPage_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -129,7 +125,6 @@
         {
             HideLoadDataButtons();
             button16.Show();
-            
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -152,8 +147,6 @@
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
             XMLGenerator xmlGenerator = new XMLGenerator();
             this.GenerateXmlButtonHandler(sender, e);
-
-
         }
 
         private void GenerateXmlButtonHandler(object sender, EventArgs e)
@@ -166,16 +159,15 @@
             var cb3Value = this.comboBox3.SelectedValue.ToString();
             xmlGenerator.XmlGenerate(dbContext, cb1Value, cb2Value, cb3Value);
         }
+
         private void button5_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             var exporter = new JsonGenerator();
             exporter.GenerateJsonFiles();
-
         }
     }
 }

@@ -35,6 +35,7 @@
                         }
                     }
                 }
+
                 return destinations;
             }
         }
@@ -59,6 +60,7 @@
                         destinations.Add(destination);
                     }
                 }
+
                 return destinations;
             }
         }

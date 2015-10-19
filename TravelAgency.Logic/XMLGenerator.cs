@@ -1,10 +1,8 @@
 ﻿namespace TravelAgency.Logic
 {
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Xml;
-    using TravelAgency.Data;
     using Dropbox;
+    using TravelAgency.Data;
 
     public class XMLGenerator
     {

@@ -11,7 +11,7 @@
     {
         private Random rand = new Random();
 
-        private readonly string[] Names = new string[]{"Visit ", "Relax in ", "Enjoy ", "Be happy in "};
+        private readonly string[] Names = new string[] { "Visit ", "Relax in ", "Enjoy ", "Be happy in " };
 
         public void AddFirstTenExcursions()
         {
@@ -69,8 +69,8 @@
                     DestinationId = currentCountryObj.ID,
                     Clients = rand.Next(0, 150),
                     PricePerClient = (decimal)rand.Next(500, 10000),
-                    TransportId = allTransportIds[rand.Next(0, allTransportIds.Count-1)],
-                    GuideId = allGuideId[rand.Next(0, allGuideId.Count-1)],
+                    TransportId = allTransportIds[rand.Next(0, allTransportIds.Count - 1)],
+                    GuideId = allGuideId[rand.Next(0, allGuideId.Count - 1)],
                     ExpenseId = rand.Next(0, 10)
                 };
 

@@ -9,7 +9,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button GenerateDataFromXml;
+        private System.Windows.Forms.Button generateDataFromXml;
+        private System.Windows.Forms.Button xmlToMongoDB;        
 
         /// <summary>
         /// Required designer variable.
@@ -46,8 +47,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.GenerateDataFromXml = new System.Windows.Forms.Button();
-            this.XmlToMongoDB = new System.Windows.Forms.Button();
+            this.generateDataFromXml = new System.Windows.Forms.Button();
+            this.xmlToMongoDB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -110,23 +111,23 @@
             // 
             // GenerateDataFromXml
             // 
-            this.GenerateDataFromXml.Location = new System.Drawing.Point(296, 82);
-            this.GenerateDataFromXml.Name = "GenerateDataFromXml";
-            this.GenerateDataFromXml.Size = new System.Drawing.Size(75, 40);
-            this.GenerateDataFromXml.TabIndex = 8;
-            this.GenerateDataFromXml.Text = "CreateDataFromXml";
-            this.GenerateDataFromXml.UseVisualStyleBackColor = true;
-            this.GenerateDataFromXml.Click += new System.EventHandler(this.GenerateDataFromXmlToSQLButtonHandler);
+            this.generateDataFromXml.Location = new System.Drawing.Point(296, 82);
+            this.generateDataFromXml.Name = "GenerateDataFromXml";
+            this.generateDataFromXml.Size = new System.Drawing.Size(75, 40);
+            this.generateDataFromXml.TabIndex = 8;
+            this.generateDataFromXml.Text = "CreateDataFromXml";
+            this.generateDataFromXml.UseVisualStyleBackColor = true;
+            this.generateDataFromXml.Click += new System.EventHandler(this.GenerateDataFromXmlToSQLButtonHandler);
             // 
             // XmlToMongoDB
             // 
-            this.XmlToMongoDB.Location = new System.Drawing.Point(305, 141);
-            this.XmlToMongoDB.Name = "XmlToMongoDB";
-            this.XmlToMongoDB.Size = new System.Drawing.Size(75, 23);
-            this.XmlToMongoDB.TabIndex = 9;
-            this.XmlToMongoDB.Text = "XmlToMongoDB";
-            this.XmlToMongoDB.UseVisualStyleBackColor = true;
-            this.XmlToMongoDB.Click += new System.EventHandler(this.GenerateDataFromXmlToSQLButtonHandler);
+            this.xmlToMongoDB.Location = new System.Drawing.Point(305, 141);
+            this.xmlToMongoDB.Name = "XmlToMongoDB";
+            this.xmlToMongoDB.Size = new System.Drawing.Size(75, 23);
+            this.xmlToMongoDB.TabIndex = 9;
+            this.xmlToMongoDB.Text = "XmlToMongoDB";
+            this.xmlToMongoDB.UseVisualStyleBackColor = true;
+            this.xmlToMongoDB.Click += new System.EventHandler(this.GenerateDataFromXmlToSQLButtonHandler);
             // 
             // Form1
             // 
@@ -135,8 +136,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(453, 262);
-            this.Controls.Add(this.XmlToMongoDB);
-            this.Controls.Add(this.GenerateDataFromXml);
+            this.Controls.Add(this.xmlToMongoDB);
+            this.Controls.Add(this.generateDataFromXml);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -150,7 +151,5 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button XmlToMongoDB;
     }
 }

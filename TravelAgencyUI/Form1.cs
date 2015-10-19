@@ -4,12 +4,8 @@
     using System.Windows.Forms;
     using Data;
     using Logic;
-    using Model;
-    using TravelAgencyUI;
-    using System.Collections.Generic;
-
-    using TravelAgency.Logic.ImportData;
     using Logic.Dropbox;
+    using TravelAgency.Logic.ImportData;
 
     public partial class Form1 : Form
     {
@@ -84,7 +80,6 @@
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

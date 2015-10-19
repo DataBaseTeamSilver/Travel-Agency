@@ -10,7 +10,6 @@
 
     public class WritteDataToExcel
     {
-
         public void WritteDestinationInExcel()
         {
             string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=../../Destinations.xlsx;Extended Properties='Excel 12.0 xml;HDR=Yes';";

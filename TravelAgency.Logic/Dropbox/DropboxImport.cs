@@ -33,6 +33,5 @@
             result.Insert(0, "*");
             return result;
         }
-
     }
 }

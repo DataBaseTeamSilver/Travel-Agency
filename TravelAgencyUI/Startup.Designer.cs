@@ -1,6 +1,6 @@
 ﻿namespace TravelAgencyUI
 {
-    partial class Startup
+    public partial class Startup
     {
         /// <summary>
         /// Required designer variable.
@@ -17,6 +17,7 @@
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 

@@ -70,7 +70,8 @@
                     Clients = rand.Next(0, 150),
                     PricePerClient = (decimal)rand.Next(500, 10000),
                     TransportId = allTransportIds[rand.Next(0, allTransportIds.Count-1)],
-                    GuideId = allGuideId[rand.Next(0, allGuideId.Count-1)]
+                    GuideId = allGuideId[rand.Next(0, allGuideId.Count-1)],
+                    ExpenseId = rand.Next(0, 10)
                 };
 
                 travelAgency.Excursions.Add(exursion);
@@ -93,7 +94,8 @@
                     Clients = 50,
                     PricePerClient = 895M,
                     TransportId = 9,
-                    GuideId = 1
+                    GuideId = 1,
+                    ExpenseId = 5
                 },
                 new Excursion
                 {
@@ -104,7 +106,8 @@
                     Clients = 15,
                     PricePerClient = 4500M,
                     TransportId = 1,
-                    GuideId = 2
+                    GuideId = 2,
+                    ExpenseId = 5
                 },
                 new Excursion
                 {
@@ -115,7 +118,8 @@
                     Clients = 27,
                     PricePerClient = 1555M,
                     TransportId = 1,
-                    GuideId = 4
+                    GuideId = 4,
+                    ExpenseId = 5
                 },
                 new Excursion
                 {
@@ -126,7 +130,8 @@
                     Clients = 32,
                     PricePerClient = 2220M,
                     TransportId = 4,
-                    GuideId = 1
+                    GuideId = 1,
+                    ExpenseId = 5
                 },
                 new Excursion
                 {
@@ -137,7 +142,8 @@
                     Clients = 45,
                     PricePerClient = 875.5M,
                     TransportId = 9,
-                    GuideId = 5
+                    GuideId = 5,
+                    ExpenseId = 5
                 },
                 new Excursion
                 {
@@ -148,7 +154,8 @@
                     Clients = 75,
                     PricePerClient = 650M,
                     TransportId = 2,
-                    GuideId = 8
+                    GuideId = 8,
+                    ExpenseId = 5
                 },
                 new Excursion
                 {
@@ -159,7 +166,8 @@
                     Clients = 105,
                     PricePerClient = 777M,
                     TransportId = 25,
-                    GuideId = 2
+                    GuideId = 2,
+                    ExpenseId = 5
                 },
                 new Excursion
                 {
@@ -170,7 +178,8 @@
                     Clients = 66,
                     PricePerClient = 1200M,
                     TransportId = 26,
-                    GuideId = 4
+                    GuideId = 4,
+                    ExpenseId = 5
                 },
                 new Excursion
                 {
@@ -181,7 +190,8 @@
                     Clients = 150,
                     PricePerClient = 1050M,
                     TransportId = 15,
-                    GuideId = 7
+                    GuideId = 7,
+                    ExpenseId = 5
                 },
                 new Excursion
                 {
@@ -192,7 +202,8 @@
                     Clients = 84,
                     PricePerClient = 1989M,
                     TransportId = 4,
-                    GuideId = 1
+                    GuideId = 1,
+                    ExpenseId = 5
                 },
             };
             return list;

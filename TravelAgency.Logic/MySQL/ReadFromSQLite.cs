@@ -8,7 +8,7 @@
     {
         public Dictionary<int?, int> GetData()
         {
-            SQLiteConnection.CreateFile("TravelAgency.sqlite");
+            SQLiteConnection.CreateFile("../../TravelAgency.sqlite");
             SQLiteConnection dataBaseConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
             dataBaseConnection.Open();
             string sql1 = "select * from Expenses";

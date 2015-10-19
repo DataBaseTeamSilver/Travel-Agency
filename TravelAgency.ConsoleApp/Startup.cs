@@ -8,6 +8,7 @@
     using Data.Migrations;
     using Logic;
     using Model;
+    using Logic.MySQL;
 
     public class Startup
     {
@@ -18,7 +19,12 @@
             //var db = new TravelAgencyDbContext();
 
             var reader = new ReadFromSQLite();
-            reader.ReadDataFromSQLLite();
+            var t = reader.GetData();
+
+            foreach (var item in t.Keys)
+            {
+                Console.WriteLine(t[item]);
+            }
 
             //var test = new CreateSampleExcursions();
             //test.AddRandomNumberOfExcursion(200);

@@ -136,16 +136,17 @@
 
         private void ReadFromMySqlAndSQLite(object sender, EventArgs e)
         {
-            HideAllImportButtons();
-            readFromMySqlAndSqliteButton.Visible = true;
+            HideLoadDataButtons();
+            ImportToExcelButton.Visible = true;
+            backButton.Visible = true;
         }
 
         private void ImportFromMySqlAndSqliteToExcel(object sender, EventArgs e)
         {
             var db = new TravelAgencyDbContext();
             var reader = new ReadFromSQLite();
-            var excelReportsToAdd = new ExcelReportReader(reader);
-            var reports = excelRepotsToAdd.GenerateReports(db);
+            var excelReportsToAdd = new ExcelReport(reader);
+            var reports = excelReportsToAdd.GenerateReports(db);
             var excelWriter = new WritteDataToExcel();
             excelWriter.WritteDestinationInExcel(reports);
         }
@@ -210,7 +211,7 @@
             label1.Visible = false;
             loadDataLabel.Visible = true;
 
-             
+
         }
 
         private void Back(object sender, EventArgs e)

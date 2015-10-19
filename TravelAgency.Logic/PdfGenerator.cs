@@ -1,6 +1,7 @@
 ﻿namespace TravelAgency.Logic
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using iTextSharp.text;
@@ -40,11 +41,9 @@
 
         private void GenerateData(Document document, TravelAgencyDbContext dbContext)
         {
-            var excursionsCount = dbContext.Excursions.Count();
-
             var excursions = dbContext
                 .Excursions
-                .Select(x => new ReportGuide()
+                .Select(x => new ReportExcursion()
                 {
                     ExcName = x.Name,
                     Destination = x.Destination.Country,
@@ -69,6 +68,13 @@
             table.AddCell(this.CreateCell(new Phrase("Clients satisfaction"), true));
             table.AddCell(this.CreateCell(new Phrase("Duration in days"), true));
 
+            InputData(excursions, table);
+
+            document.Add(table);
+        }
+
+        private void InputData(List<ReportExcursion> excursions, PdfPTable table)
+        {
             for (int i = 0; i < excursions.Count; i++)
             {
                 table.AddCell(this.CreateCell(new Phrase(excursions[i].ExcName)));
@@ -94,8 +100,6 @@
 
             table.AddCell(this.CreateCell(new Phrase("Total number of clients:"), false, 4));
             table.AddCell(this.CreateCell(new Phrase(allClients.ToString())));
-
-            document.Add(table);
         }
 
         private PdfPCell CreateCell(Phrase phrase, bool isHeader = false, int cellColspan = 0)

@@ -17,9 +17,6 @@
             XmlElement rootnode = document.DocumentElement;
 
             return this.ReadData(rootnode.GetElementsByTagName("guide"));
-
-            //var mongoGenerator = new MongoDBGenerator();
-            //mongoGenerator.InputGuides(newGuides);
         }
 
         private IEnumerable<Guide> ReadData(XmlNodeList nodeList)

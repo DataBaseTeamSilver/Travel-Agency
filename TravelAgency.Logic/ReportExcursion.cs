@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class ReportGuide
+    public class ReportExcursion
     {
         public string ExcName { get; set; }
 

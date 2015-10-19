@@ -42,7 +42,7 @@
                         {
                             var expenseToAdd = currentReport.Income - sqliteReport.Value;
                             finalReports[i, 0] = currentReport.Name;
-                            finalReports[i, 1] = currentReport.Name;
+                            finalReports[i, 1] = sqliteReport.Value.ToString();
                         }
                     }
                 }

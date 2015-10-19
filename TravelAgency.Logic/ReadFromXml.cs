@@ -24,17 +24,21 @@
 
         private IEnumerable<Guide> ReadData(XmlNodeList nodeList)
         {
-            var albums = new HashSet<Guide>();
+            var guides = new HashSet<Guide>();
 
-            foreach (XmlNode album in nodeList)
+            foreach (XmlNode guide in nodeList)
             {
-                var guide = new Guide();
-                guide.Name = album["name"].InnerText;
-                guide.Experience = int.Parse(album["skill"].InnerText);
-                albums.Add(guide);
+                var newGuide = new Guide();
+                newGuide.Name = guide["name"].InnerText;
+                newGuide.Experience = int.Parse(guide["skill"].InnerText);
+
+                if (!guides.Contains(newGuide))
+                {
+                    guides.Add(newGuide);                
+                }
             }
 
-            return albums;
+            return guides;
         }
     }
 }

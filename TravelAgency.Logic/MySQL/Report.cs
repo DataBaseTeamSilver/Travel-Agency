@@ -19,5 +19,7 @@
         public string TransportType { get; set; }
 
         public string GuideName { get; set; }
+
+        public int? ExpenseId { get; set; }
     }
 }

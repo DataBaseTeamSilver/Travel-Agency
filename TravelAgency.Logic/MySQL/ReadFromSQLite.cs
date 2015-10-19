@@ -24,17 +24,10 @@
           
                 if (!resultExpenses.ContainsKey(expenseId))
                 {
-<<<<<<< HEAD
-                    resultExpenses.Add(expenseId, expenseAmount);
+                    resultExpenses.Add(expenseId, (hotelExpense + transportExpense));
                 }
 
-                Console.WriteLine("ID - {0} Hotel - {1}, Transport - {2}", reader["ExpensesId"], reader["HotelExpenses"], reader["TransportExpenses"]);
-=======
-                    resultExpenses.Add(expenseId, (hotelExpense + transportExpense));
-                }             
->>>>>>> origin/master
             }
-
             return resultExpenses;
         }
     }

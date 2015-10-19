@@ -80,5 +80,10 @@
             var mongoGenerator = new MongoDBGenerator();
             mongoGenerator.InputGuides(newGuides);
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,7 +18,7 @@
         private System.Windows.Forms.Button importFromSqlToXmlButton;
         private System.Windows.Forms.Button importFromSqlToJsonButton;
         private System.Windows.Forms.Button loadFromXmlToMongoDbButton;
-        private System.Windows.Forms.Button ImportToExcelButton;
+        private System.Windows.Forms.Button importToExcelButton;
         private System.Windows.Forms.Button importFormXmlToSqlButton;
         private System.Windows.Forms.Button addExcursionsButton;
         private System.Windows.Forms.Button add1000randomExcursionsButton;
@@ -27,6 +27,7 @@
         private System.Windows.Forms.ComboBox destinationsComboBox;
         private System.Windows.Forms.ComboBox guidesComboBox;
         private System.Windows.Forms.ComboBox transportsComboBox;
+        private System.Windows.Forms.Button backButton;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -63,7 +64,7 @@
             this.importFromSqlToXmlButton = new System.Windows.Forms.Button();
             this.importFromSqlToJsonButton = new System.Windows.Forms.Button();
             this.loadFromXmlToMongoDbButton = new System.Windows.Forms.Button();
-            this.ImportToExcelButton = new System.Windows.Forms.Button();
+            this.importToExcelButton = new System.Windows.Forms.Button();
             this.importFormXmlToSqlButton = new System.Windows.Forms.Button();
             this.addExcursionsButton = new System.Windows.Forms.Button();
             this.add1000randomExcursionsButton = new System.Windows.Forms.Button();
@@ -225,17 +226,17 @@
             // 
             // ImportToExcelButton
             // 
-            this.ImportToExcelButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImportToExcelButton.BackgroundImage")));
-            this.ImportToExcelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ImportToExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ImportToExcelButton.ForeColor = System.Drawing.Color.Transparent;
-            this.ImportToExcelButton.Location = new System.Drawing.Point(68, 83);
-            this.ImportToExcelButton.Name = "ImportToExcelButton";
-            this.ImportToExcelButton.Size = new System.Drawing.Size(125, 138);
-            this.ImportToExcelButton.TabIndex = 15;
-            this.ImportToExcelButton.UseVisualStyleBackColor = true;
-            this.ImportToExcelButton.Visible = false;
-            this.ImportToExcelButton.Click += new System.EventHandler(this.ImportFromMySqlAndSqliteToExcel);
+            this.importToExcelButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImportToExcelButton.BackgroundImage")));
+            this.importToExcelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.importToExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.importToExcelButton.ForeColor = System.Drawing.Color.Transparent;
+            this.importToExcelButton.Location = new System.Drawing.Point(68, 83);
+            this.importToExcelButton.Name = "ImportToExcelButton";
+            this.importToExcelButton.Size = new System.Drawing.Size(125, 138);
+            this.importToExcelButton.TabIndex = 15;
+            this.importToExcelButton.UseVisualStyleBackColor = true;
+            this.importToExcelButton.Visible = false;
+            this.importToExcelButton.Click += new System.EventHandler(this.ImportFromMySqlAndSqliteToExcel);
             // 
             // importFormXmlToSqlButton
             // 
@@ -353,7 +354,7 @@
             this.Controls.Add(this.add1000randomExcursionsButton);
             this.Controls.Add(this.addExcursionsButton);
             this.Controls.Add(this.importFormXmlToSqlButton);
-            this.Controls.Add(this.ImportToExcelButton);
+            this.Controls.Add(this.importToExcelButton);
             this.Controls.Add(this.loadFromXmlToMongoDbButton);
             this.Controls.Add(this.importFromSqlToJsonButton);
             this.Controls.Add(this.importFromSqlToXmlButton);
@@ -374,7 +375,5 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button backButton;
     }
 }

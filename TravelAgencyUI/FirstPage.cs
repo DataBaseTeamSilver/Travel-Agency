@@ -30,8 +30,8 @@
                 var path = this.openFileDialog1.InitialDirectory + this.openFileDialog1.FileName;
                 ReadExcelFromZip excelReader = new ReadExcelFromZip();
                 this.destinations = excelReader.SelectExcelFilesFromZip(path);
-                HideLoadDataButtons();
-                ShowImportLabel();
+                this.HideLoadDataButtons();
+                this.ShowImportLabel();
                 importFromExcelToSqlButton.Show();
                 backButton.Visible = true;
             }
@@ -48,7 +48,7 @@
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
             ReadFromXml xmlReader = new ReadFromXml();
             this.guides = xmlReader.ImportFromXmlIntoSql("../../../Data files/Guides.xml");
-            HideLoadDataButtons();
+            this.HideLoadDataButtons();
             importFormXmlToSqlButton.Show();
             loadFromXmlToMongoDbButton.Show();
             backButton.Visible = true;
@@ -68,7 +68,7 @@
 
         private void ReadFromMongoDb(object sender, EventArgs e)
         {
-            HideLoadDataButtons();
+            this.HideLoadDataButtons();
             importFromMongoDbToSqlButton.Show();
             backButton.Visible = true;
         }
@@ -82,7 +82,7 @@
 
         private void ReadFromSQL(object sender, EventArgs e)
         {
-            HideLoadDataButtons();
+            this.HideLoadDataButtons();
             importFromSqlToPdfButton.Visible = true;
             importFromSqlToXmlButton.Visible = true;
             importFromSqlToJsonButton.Visible = true;
@@ -100,7 +100,7 @@
             this.destinationsComboBox.DataSource = inport.GetDestination();
             this.guidesComboBox.DataSource = inport.GetGuides();
             this.transportsComboBox.DataSource = inport.GetTransports();
-            //this.comboBox1.AutoCompleteSource = listToInport;
+            ////this.comboBox1.AutoCompleteSource = listToInport;
         }
 
         private void GenerateXmlButtonHandler(object sender, EventArgs e)
@@ -136,8 +136,8 @@
 
         private void ReadFromMySqlAndSQLite(object sender, EventArgs e)
         {
-            HideLoadDataButtons();
-            ImportToExcelButton.Visible = true;
+            this.HideLoadDataButtons();
+            importToExcelButton.Visible = true;
             backButton.Visible = true;
         }
 
@@ -203,21 +203,19 @@
             importFromSqlToJsonButton.Visible = false;
             importFromSqlToPdfButton.Visible = false;
             importFromSqlToXmlButton.Visible = false;
-            ImportToExcelButton.Visible = false;
+            importToExcelButton.Visible = false;
             loadFromXmlToMongoDbButton.Visible = false;
             destinationsComboBox.Visible = false;
             guidesComboBox.Visible = false;
             transportsComboBox.Visible = false;
             label1.Visible = false;
             loadDataLabel.Visible = true;
-
-
         }
 
         private void Back(object sender, EventArgs e)
         {
-            ShowAllLoadButtons();
-            HideAllImportButtons();
+            this.ShowAllLoadButtons();
+            this.HideAllImportButtons();
         }
     }
 }

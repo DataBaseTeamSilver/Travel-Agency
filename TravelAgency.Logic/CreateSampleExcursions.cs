@@ -9,15 +9,15 @@
 
     public class CreateSampleExcursions
     {
-        private Random rand = new Random();
-
         private readonly string[] Names = new string[] { "Visit ", "Relax in ", "Enjoy ", "Be happy in " };
+
+        private Random rand = new Random();
 
         public void AddFirstTenExcursions()
         {
             using (var travelAgency = new TravelAgencyDbContext())
             {
-                var excursions = GetExcursions();
+                var excursions = this.GetExcursions();
 
                 foreach (var item in excursions)
                 {
@@ -57,21 +57,21 @@
                     travelAgency = new TravelAgencyDbContext();
                 }
 
-                var startDate = new DateTime(2015, rand.Next(1, 13), rand.Next(1, 29));
-                var endDate = startDate.AddDays(rand.Next(5, 15));
-                var currentCountryObj = allDestinations[rand.Next(0, allDestinations.Count - 1)];
+                var startDate = new DateTime(2015, this.rand.Next(1, 13), this.rand.Next(1, 29));
+                var endDate = startDate.AddDays(this.rand.Next(5, 15));
+                var currentCountryObj = allDestinations[this.rand.Next(0, allDestinations.Count - 1)];
 
                 var exursion = new Excursion
                 {
-                    Name = Names[rand.Next(0, Names.Length)] + currentCountryObj.Name,
+                    Name = this.Names[this.rand.Next(0, this.Names.Length)] + currentCountryObj.Name,
                     StartDate = startDate,
                     EndDate = endDate,
                     DestinationId = currentCountryObj.ID,
-                    Clients = rand.Next(0, 150),
-                    PricePerClient = (decimal)rand.Next(500, 10000),
-                    TransportId = allTransportIds[rand.Next(0, allTransportIds.Count - 1)],
-                    GuideId = allGuideId[rand.Next(0, allGuideId.Count - 1)],
-                    ExpenseId = rand.Next(0, 10)
+                    Clients = this.rand.Next(0, 150),
+                    PricePerClient = (decimal)this.rand.Next(500, 10000),
+                    TransportId = allTransportIds[this.rand.Next(0, allTransportIds.Count - 1)],
+                    GuideId = allGuideId[this.rand.Next(0, allGuideId.Count - 1)],
+                    ExpenseId = this.rand.Next(0, 10)
                 };
 
                 travelAgency.Excursions.Add(exursion);
@@ -88,8 +88,8 @@
                 new Excursion
                 {
                     Name = "Sea Holiday",
-                    StartDate = new DateTime(2015,08,10),
-                    EndDate = new DateTime(2015,08,20),
+                    StartDate = new DateTime(2015, 08, 10),
+                    EndDate = new DateTime(2015, 08, 20),
                     DestinationId = 6,
                     Clients = 50,
                     PricePerClient = 895M,
@@ -100,8 +100,8 @@
                 new Excursion
                 {
                     Name = "Visit Monaco",
-                    StartDate = new DateTime(2015,08,20),
-                    EndDate = new DateTime(2015,08,24),
+                    StartDate = new DateTime(2015, 08, 20),
+                    EndDate = new DateTime(2015, 08, 24),
                     DestinationId = 1,
                     Clients = 15,
                     PricePerClient = 4500M,
@@ -112,8 +112,8 @@
                 new Excursion
                 {
                     Name = "Find the love in Paris",
-                    StartDate = new DateTime(2015,08,15),
-                    EndDate = new DateTime(2015,08,23),
+                    StartDate = new DateTime(2015, 08, 15),
+                    EndDate = new DateTime(2015, 08, 23),
                     DestinationId = 2,
                     Clients = 27,
                     PricePerClient = 1555M,
@@ -124,8 +124,8 @@
                 new Excursion
                 {
                     Name = "Surf in the Atlantic ocean",
-                    StartDate = new DateTime(2015,08,21),
-                    EndDate = new DateTime(2015,08,27),
+                    StartDate = new DateTime(2015, 08, 21),
+                    EndDate = new DateTime(2015, 08, 27),
                     DestinationId = 3,
                     Clients = 32,
                     PricePerClient = 2220M,
@@ -136,8 +136,8 @@
                 new Excursion
                 {
                     Name = "Sea Holiday",
-                    StartDate = new DateTime(2015,09,01),
-                    EndDate = new DateTime(2015,09,08),
+                    StartDate = new DateTime(2015, 09, 01),
+                    EndDate = new DateTime(2015, 09, 08),
                     DestinationId = 6,
                     Clients = 45,
                     PricePerClient = 875.5M,
@@ -148,8 +148,8 @@
                 new Excursion
                 {
                     Name = "Visit the Pyramids",
-                    StartDate = new DateTime(2015,09,05),
-                    EndDate = new DateTime(2015,09,13),
+                    StartDate = new DateTime(2015, 09, 05),
+                    EndDate = new DateTime(2015, 09, 13),
                     DestinationId = 5,
                     Clients = 75,
                     PricePerClient = 650M,
@@ -160,8 +160,8 @@
                 new Excursion
                 {
                     Name = "All Inclusive drinking",
-                    StartDate = new DateTime(2015,09,11),
-                    EndDate = new DateTime(2015,09,20),
+                    StartDate = new DateTime(2015, 09, 11),
+                    EndDate = new DateTime(2015, 09, 20),
                     DestinationId = 4,
                     Clients = 105,
                     PricePerClient = 777M,
@@ -172,8 +172,8 @@
                 new Excursion
                 {
                     Name = "Visit cote d'azur",
-                    StartDate = new DateTime(2015,09,20),
-                    EndDate = new DateTime(2015,09,27),
+                    StartDate = new DateTime(2015, 09, 20),
+                    EndDate = new DateTime(2015, 09, 27),
                     DestinationId = 2,
                     Clients = 66,
                     PricePerClient = 1200M,
@@ -184,8 +184,8 @@
                 new Excursion
                 {
                     Name = "Visit all Italian ports",
-                    StartDate = new DateTime(2015,09,14),
-                    EndDate = new DateTime(2015,09,24),
+                    StartDate = new DateTime(2015, 09, 14),
+                    EndDate = new DateTime(2015, 09, 24),
                     DestinationId = 7,
                     Clients = 150,
                     PricePerClient = 1050M,
@@ -196,8 +196,8 @@
                 new Excursion
                 {
                     Name = "Visit Lisbon",
-                    StartDate = new DateTime(2015,09,23),
-                    EndDate = new DateTime(2015,09,30),
+                    StartDate = new DateTime(2015, 09, 23),
+                    EndDate = new DateTime(2015, 09, 30),
                     DestinationId = 3,
                     Clients = 84,
                     PricePerClient = 1989M,

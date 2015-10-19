@@ -174,11 +174,34 @@
   <project key="-1989647501">
     <configuration>DEBUG;TRACE</configuration>
   </project>
+  <sourcecode name="Program.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2015/09/29 12:00:32.515</styleCop>
+      <settingsFile>2015/10/18 02:09:35.861</settingsFile>
+      <sourceFile>2015/10/20 00:13:00.108</sourceFile>
+      <parser>2015/09/29 12:00:32.515</parser>
+      <StyleCop.CSharp.DocumentationRules>2015/09/29 12:00:32.515</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>-1370583304</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2015/09/29 12:00:32.515</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2015/09/29 12:00:32.515</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2015/09/29 12:00:32.515</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2015/09/29 12:00:32.515</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2015/09/29 12:00:32.515</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2015/09/29 12:00:32.515</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
   <sourcecode name="Startup.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2015/09/29 12:00:32.515</styleCop>
       <settingsFile>2015/10/18 02:09:35.861</settingsFile>
-      <sourceFile>2015/10/19 22:50:44.649</sourceFile>
+      <sourceFile>2015/10/20 00:29:21.506</sourceFile>
       <parser>2015/09/29 12:00:32.515</parser>
       <StyleCop.CSharp.DocumentationRules>2015/09/29 12:00:32.515</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>-1370583304</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -201,30 +224,7 @@
     <timestamps>
       <styleCop>2015/09/29 12:00:32.515</styleCop>
       <settingsFile>2015/10/18 02:09:35.861</settingsFile>
-      <sourceFile>2015/10/19 22:51:37.419</sourceFile>
-      <parser>2015/09/29 12:00:32.515</parser>
-      <StyleCop.CSharp.DocumentationRules>2015/09/29 12:00:32.515</StyleCop.CSharp.DocumentationRules>
-      <StyleCop.CSharp.DocumentationRules.FilesHashCode>-1370583304</StyleCop.CSharp.DocumentationRules.FilesHashCode>
-      <StyleCop.CSharp.LayoutRules>2015/09/29 12:00:32.515</StyleCop.CSharp.LayoutRules>
-      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
-      <StyleCop.CSharp.MaintainabilityRules>2015/09/29 12:00:32.515</StyleCop.CSharp.MaintainabilityRules>
-      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
-      <StyleCop.CSharp.NamingRules>2015/09/29 12:00:32.515</StyleCop.CSharp.NamingRules>
-      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
-      <StyleCop.CSharp.OrderingRules>2015/09/29 12:00:32.515</StyleCop.CSharp.OrderingRules>
-      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
-      <StyleCop.CSharp.ReadabilityRules>2015/09/29 12:00:32.515</StyleCop.CSharp.ReadabilityRules>
-      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
-      <StyleCop.CSharp.SpacingRules>2015/09/29 12:00:32.515</StyleCop.CSharp.SpacingRules>
-      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
-    </timestamps>
-    <violations />
-  </sourcecode>
-  <sourcecode name="Program.cs" parser="StyleCop.CSharp.CsParser">
-    <timestamps>
-      <styleCop>2015/09/29 12:00:32.515</styleCop>
-      <settingsFile>2015/10/18 02:09:35.861</settingsFile>
-      <sourceFile>2015/10/19 16:48:18.058</sourceFile>
+      <sourceFile>2015/10/20 00:29:21.506</sourceFile>
       <parser>2015/09/29 12:00:32.515</parser>
       <StyleCop.CSharp.DocumentationRules>2015/09/29 12:00:32.515</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>-1370583304</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -247,7 +247,7 @@
     <timestamps>
       <styleCop>2015/09/29 12:00:32.515</styleCop>
       <settingsFile>2015/10/18 02:09:35.861</settingsFile>
-      <sourceFile>2015/10/19 22:55:09.294</sourceFile>
+      <sourceFile>2015/10/20 00:30:30.157</sourceFile>
       <parser>2015/09/29 12:00:32.515</parser>
       <StyleCop.CSharp.DocumentationRules>2015/09/29 12:00:32.515</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>-1370583304</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -273,7 +273,7 @@
     <timestamps>
       <styleCop>2015/09/29 12:00:32.515</styleCop>
       <settingsFile>2015/10/18 02:09:35.861</settingsFile>
-      <sourceFile>2015/10/20 00:11:30.822</sourceFile>
+      <sourceFile>2015/10/20 00:33:25.900</sourceFile>
       <parser>2015/09/29 12:00:32.515</parser>
       <StyleCop.CSharp.DocumentationRules>2015/09/29 12:00:32.515</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>-1370583304</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -291,85 +291,14 @@
       <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
     </timestamps>
     <violations>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to HideLoadDataButtons must begin with the 'this.', 'base.', 'object.' or 'FirstPage.' or 'Form.' prefix to indicate the intended method call. </context>
-        <line>33</line>
-        <index>1160</index>
-        <endIndex>1178</endIndex>
-        <startLine>33</startLine>
-        <startColumn>17</startColumn>
-        <endLine>33</endLine>
-        <endColumn>35</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to ShowImportLabel must begin with the 'this.', 'base.', 'object.' or 'FirstPage.' or 'Form.' prefix to indicate the intended method call. </context>
-        <line>34</line>
-        <index>1200</index>
-        <endIndex>1214</endIndex>
-        <startLine>34</startLine>
-        <startColumn>17</startColumn>
-        <endLine>34</endLine>
-        <endColumn>31</endColumn>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
         <context>The variable name 'dbContext' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
         <line>48</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to HideLoadDataButtons must begin with the 'this.', 'base.', 'object.' or 'FirstPage.' or 'Form.' prefix to indicate the intended method call. </context>
-        <line>51</line>
-        <index>1869</index>
-        <endIndex>1887</endIndex>
-        <startLine>51</startLine>
-        <startColumn>13</startColumn>
-        <endLine>51</endLine>
-        <endColumn>31</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to HideLoadDataButtons must begin with the 'this.', 'base.', 'object.' or 'FirstPage.' or 'Form.' prefix to indicate the intended method call. </context>
-        <line>71</line>
-        <index>2554</index>
-        <endIndex>2572</endIndex>
-        <startLine>71</startLine>
-        <startColumn>13</startColumn>
-        <endLine>71</endLine>
-        <endColumn>31</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to HideLoadDataButtons must begin with the 'this.', 'base.', 'object.' or 'FirstPage.' or 'Form.' prefix to indicate the intended method call. </context>
-        <line>85</line>
-        <index>3025</index>
-        <endIndex>3043</endIndex>
-        <startLine>85</startLine>
-        <startColumn>13</startColumn>
-        <endLine>85</endLine>
-        <endColumn>31</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
-        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>103</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
         <context>The variable name 'dbContext' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
         <line>97</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>103</line>
-        <index>3827</index>
-        <endIndex>3877</endIndex>
-        <startLine>103</startLine>
-        <startColumn>13</startColumn>
-        <endLine>103</endLine>
-        <endColumn>63</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
@@ -385,87 +314,6 @@
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
         <context>The variable name 'dbContext' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
         <line>126</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to HideAllImportButtons must begin with the 'this.', 'base.', 'object.' or 'FirstPage.' or 'Form.' prefix to indicate the intended method call. </context>
-        <line>139</line>
-        <index>5297</index>
-        <endIndex>5316</endIndex>
-        <startLine>139</startLine>
-        <startColumn>13</startColumn>
-        <endLine>139</endLine>
-        <endColumn>32</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
-        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>147</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to reports must begin with the 'this.', 'base.', 'object.' or 'FirstPage.' or 'Form.' prefix to indicate the intended method call. </context>
-        <line>150</line>
-        <index>5827</index>
-        <endIndex>5833</endIndex>
-        <startLine>150</startLine>
-        <startColumn>50</startColumn>
-        <endLine>150</endLine>
-        <endColumn>56</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>147</line>
-        <index>5597</index>
-        <endIndex>5652</endIndex>
-        <startLine>147</startLine>
-        <startColumn>13</startColumn>
-        <endLine>147</endLine>
-        <endColumn>68</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>148</line>
-        <index>5667</index>
-        <endIndex>5719</endIndex>
-        <startLine>148</startLine>
-        <startColumn>13</startColumn>
-        <endLine>148</endLine>
-        <endColumn>65</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CodeMustNotContainMultipleBlankLinesInARow" ruleCheckId="SA1507">
-        <context>The code must not contain multiple blank lines in a row.</context>
-        <line>213</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketsMustNotBePrecededByBlankLine" ruleCheckId="SA1508">
-        <context>A closing curly bracket must not be preceded by a blank line.</context>
-        <line>214</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to ShowAllLoadButtons must begin with the 'this.', 'base.', 'object.' or 'FirstPage.' or 'Form.' prefix to indicate the intended method call. </context>
-        <line>218</line>
-        <index>8239</index>
-        <endIndex>8256</endIndex>
-        <startLine>218</startLine>
-        <startColumn>13</startColumn>
-        <endLine>218</endLine>
-        <endColumn>30</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to HideAllImportButtons must begin with the 'this.', 'base.', 'object.' or 'FirstPage.' or 'Form.' prefix to indicate the intended method call. </context>
-        <line>219</line>
-        <index>8274</index>
-        <endIndex>8293</endIndex>
-        <startLine>219</startLine>
-        <startColumn>13</startColumn>
-        <endLine>219</endLine>
-        <endColumn>32</endColumn>
         <warning>False</warning>
       </violation>
     </violations>

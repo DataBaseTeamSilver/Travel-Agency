@@ -32,7 +32,9 @@
             {
                 var path = this.openFileDialog1.InitialDirectory + this.openFileDialog1.FileName;
                 ReadExcelFromZip excelReader = new ReadExcelFromZip();
-                excelReader.SelectExcelFilesFromZip(path);
+                var destinations = excelReader.SelectExcelFilesFromZip(path);
+                var import = new ImportToSQL();
+                import.ImportFromExcelToSQL(destinations);
             }
         }
 

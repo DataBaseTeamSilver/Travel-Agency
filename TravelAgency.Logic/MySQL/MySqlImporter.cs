@@ -25,7 +25,8 @@
                     TotalIncome = x.PricePerClient * x.Clients,
                     TransportCompany = x.Transport.CompanyName,
                     TransportType = x.Transport.Type.ToString(),
-                    GuideName = x.Guide.Name
+                    GuideName = x.Guide.Name,
+                    ExpenseId = x.ExpenseId
                 }).ToList();
 
                 var reportNames = reportsContext.GetAll<Report>().Select(x => x.Name).ToList();

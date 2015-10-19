@@ -23,7 +23,8 @@
                 TotalIncome = x.TotalIncome,
                 TransportCompany = x.TransportCompany,
                 TransportType = x.TransportType,
-                GuideName = x.GuideName
+                GuideName = x.GuideName,
+                ExpenseId = x.ExpenseId
             }).ToTable("Reports");
 
             reportConfiguration.HasProperty(p => p.Id).IsIdentity(KeyGenerator.Autoinc);

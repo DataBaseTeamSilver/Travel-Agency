@@ -7,6 +7,7 @@
     using Data;
     using Data.Migrations;
     using Logic;
+    using Logic.MySQL;
     using Model;
 
     public class Startup
@@ -17,8 +18,10 @@
 
             var db = new TravelAgencyDbContext();
 
-            var test = new CreateSampleExcursions();
-            test.AddRandomNumberOfExcursion(200);
+            var mysqlImporter = new MySqlImporter();
+            mysqlImporter.UpdateDatabase(db);
+            //var test = new CreateSampleExcursions();
+            //test.AddRandomNumberOfExcursion(200);
         }        
     }
 }

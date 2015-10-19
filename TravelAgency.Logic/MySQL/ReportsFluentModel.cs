@@ -15,7 +15,7 @@
             ProviderName = "MySql.Data.MySqlClient"
         };
 
-        private const string DbConnection = "MySqlConnection";
+        private const string DbConnection = "MySqlTravelAgency";
 
         public ReportsFluentModel()
             : base(DbConnection, backendConfiguration, metadataContainer)

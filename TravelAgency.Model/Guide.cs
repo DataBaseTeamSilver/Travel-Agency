@@ -23,6 +23,17 @@
         [Required]
         public int Experience { get; set; }
 
-        public virtual ICollection<Excursion> Excursions { get; set; }
+        public virtual ICollection<Excursion> Excursions
+        {
+            get
+            {
+                return this.excursions;
+            }
+
+            set
+            {
+                this.excursions = value;
+            }
+        }
     }
 }

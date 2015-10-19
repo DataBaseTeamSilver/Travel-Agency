@@ -4,6 +4,7 @@
     using System.Linq;
     using System.Xml;
     using TravelAgency.Data;
+    using Dropbox;
 
     public class XMLGenerator
     {
@@ -14,7 +15,8 @@
             writer.Formatting = Formatting.Indented;
             writer.Indentation = 2;
             writer.WriteStartElement("Table");
-            var data = this.GetData(dbContext, destination, guide, transport);
+            var dataInvoker = new DataInvoker();
+            var data = dataInvoker.GetData(dbContext, destination, guide, transport);
 
             foreach (var report in data)
             {
@@ -24,24 +26,6 @@
             writer.WriteEndElement();
             writer.WriteEndDocument();
             writer.Close();
-        }
-
-        private IEnumerable<ReportTransport> GetData(TravelAgencyDbContext dbContext, string destination, string guide, string transport)
-        {
-            var excursions = dbContext
-                .Excursions
-                .Where(s => s.Transport.CompanyName == transport)
-                .Select(x => new ReportTransport()
-                {
-                    ExcName = x.Name,
-                    StartDate = x.StartDate,
-                    EndDate = x.EndDate,
-                    CompanyName = x.Transport.CompanyName,
-                    TransportType = x.Transport.Type
-                })
-                .ToList();
-
-            return excursions;
         }
 
         private void CreateNode(ReportTransport report, XmlTextWriter writer)

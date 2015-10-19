@@ -14,5 +14,7 @@
         public string CompanyName { get; set; }
 
         public TransportType TransportType { get; set; }
+
+        public string County { get; set; }
     }
 }

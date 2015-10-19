@@ -1,8 +1,8 @@
-﻿namespace TravelAgency.Logic
+﻿namespace TravelAgency.Logic.Dropbox
 {
     using System.Collections.Generic;
     using System.Linq;
-    using TravelAgency.Data;
+    using Data;
 
     public class DropboxImport
     {
@@ -12,15 +12,19 @@
         {
             this.dbContext = dbContext;
         }
-
+        
         public List<string> GetDestination()
         {
-            return this.dbContext.Destinations.Select(x => x.Country).ToList();
+            var result =  this.dbContext.Destinations.Select(x => x.Country).ToList();
+            result.Insert(0, "*");
+            return result;
         }
 
         public List<string> GetGuides()
         {
-            return this.dbContext.Guides.Select(x => x.Name).ToList();
+            var result =  this.dbContext.Guides.Select(x => x.Name).ToList();
+            result.Insert(0, "*");
+            return result;
         }
 
         public List<string> GetTransports()
@@ -29,5 +33,6 @@
             result.Insert(0, "*");
             return result;
         }
+
     }
 }

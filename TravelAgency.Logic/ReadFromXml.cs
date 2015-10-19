@@ -2,49 +2,43 @@
 {
     using System.Collections.Generic;
     using System.Xml;
+
     using TravelAgency.Data;
+    using TravelAgency.Logic.ImportData;
     using TravelAgency.Model;
 
     public class ReadFromXml
     {
-        public void ImportFromXmlIntoSql(TravelAgencyDbContext dbContext)
+        public IEnumerable<Guide> ImportFromXmlIntoSql(string path)
         {
             XmlDocument document = new XmlDocument();
-            document.Load("../../../Data files/Guides.xml");
+            document.Load(path);
 
             XmlElement rootnode = document.DocumentElement;
 
-            var newGuides = this.ReadData(rootnode.GetElementsByTagName("guide"));
+            return this.ReadData(rootnode.GetElementsByTagName("guide"));
 
-            this.InputNewGuides(dbContext, newGuides);
-
-            var mongoGenerator = new MongoDBGenerator();
-            mongoGenerator.InputGuides(newGuides);
+            //var mongoGenerator = new MongoDBGenerator();
+            //mongoGenerator.InputGuides(newGuides);
         }
 
         private IEnumerable<Guide> ReadData(XmlNodeList nodeList)
         {
-            var albums = new HashSet<Guide>();
+            var guides = new HashSet<Guide>();
 
-            foreach (XmlNode album in nodeList)
+            foreach (XmlNode guide in nodeList)
             {
-                var guide = new Guide();
-                guide.Name = album["name"].InnerText;
-                guide.Experience = int.Parse(album["skill"].InnerText);
-                albums.Add(guide);
+                var newGuide = new Guide();
+                newGuide.Name = guide["name"].InnerText;
+                newGuide.Experience = int.Parse(guide["skill"].InnerText);
+
+                if (!guides.Contains(newGuide))
+                {
+                    guides.Add(newGuide);                
+                }
             }
 
-            return albums;
-        }
-
-        private void InputNewGuides(TravelAgencyDbContext dbContext, IEnumerable<Guide> newGuides)
-        {
-            foreach (var guide in newGuides)
-            {
-                dbContext.Guides.Add(guide);
-            }
-
-            dbContext.SaveChanges();
+            return guides;
         }
     }
 }

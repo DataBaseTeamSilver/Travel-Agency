@@ -8,6 +8,8 @@
     using TravelAgencyUI;
     using System.Collections.Generic;
 
+    using TravelAgency.Logic.ImportData;
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -35,8 +37,8 @@
                 var path = this.openFileDialog1.InitialDirectory + this.openFileDialog1.FileName;
                 ReadExcelFromZip excelReader = new ReadExcelFromZip();
                 var destinations = excelReader.SelectExcelFilesFromZip(path);
-                var import = new ImportToSQL();
-                import.ImportFromExcelToSQL(destinations);
+                var import = new ImportDestinationsToSQL();
+                import.ImportDataToSQL(destinations);
             }
         }
 
@@ -59,12 +61,24 @@
             xmlGenerator.XmlGenerate(dbContext, cb1Value, cb2Value, cb3Value);
         }
 
-        private void GenerateDataFromXmlButtonHandler(object sender, EventArgs e)
+        private void GenerateDataFromXmlToSQLButtonHandler(object sender, EventArgs e)
         {
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
             ReadFromXml xmlReader = new ReadFromXml();
+            var newGuides = xmlReader.ImportFromXmlIntoSql("../../../Data files/Guides.xml");
 
-            xmlReader.ImportFromXmlIntoSql(dbContext);
+            ImportToSQL inputNewGuides = new ImportGuidesToSQL();
+            inputNewGuides.ImportDataToSQL(newGuides);
+        }
+
+        private void GenerateDataFromXmlToMongoDBButtonHandler(object sender, EventArgs e)
+        {
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+            ReadFromXml xmlReader = new ReadFromXml();
+            var newGuides = xmlReader.ImportFromXmlIntoSql("../../../Data files/Guides.xml");
+
+            var mongoGenerator = new MongoDBGenerator();
+            mongoGenerator.InputGuides(newGuides);
         }
     }
 }

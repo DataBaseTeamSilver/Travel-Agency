@@ -5,7 +5,7 @@
     using Telerik.OpenAccess;
     using Telerik.OpenAccess.Metadata;
 
-    public partial class ReportsFluentModel : OpenAccessContext
+    internal partial class ReportsFluentModel : OpenAccessContext
     {
         static MetadataContainer metadataContainer = new ReportsFluentSource().GetModel();
 

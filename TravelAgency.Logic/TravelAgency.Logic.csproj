@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateTravelAgencyDb.cs" />
     <Compile Include="DropboxImport.cs" />
     <Compile Include="ImportToSQL.cs" />
     <Compile Include="JsonExporter.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="ReadFromXml.cs" />
     <Compile Include="ReportGuide.cs" />
     <Compile Include="ReportTransport.cs" />
+    <Compile Include="WritteDataToExcel.cs" />
     <Compile Include="XMLGenerator.cs" />
   </ItemGroup>
   <ItemGroup>

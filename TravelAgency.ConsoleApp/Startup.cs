@@ -13,7 +13,7 @@
     {
         public static void Main()
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
+           
             var db = new TravelAgencyDbContext();
         }        
     }

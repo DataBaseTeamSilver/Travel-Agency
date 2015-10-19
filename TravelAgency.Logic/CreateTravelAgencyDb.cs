@@ -6,7 +6,8 @@
 
     public class CreateTravelAgencyDb
     {
-        private const string FinalMethodMessgae = "Database TravelAgency is created {0}";
+        private const string SuccessMessage = "Database Travel Agency is created!";
+        private const string FailMessage = "Database Travel Agency is already existing!";
 
         public CreateTravelAgencyDb()
         {
@@ -19,7 +20,7 @@
             {
                 var result = db.Database.CreateIfNotExists();
 
-                return string.Format(FinalMethodMessgae, result ? "YES" : "NO");
+                return result ? SuccessMessage : FailMessage;
             }
         }
     }

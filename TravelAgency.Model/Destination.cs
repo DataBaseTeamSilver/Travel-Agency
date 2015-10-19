@@ -12,7 +12,6 @@
             this.excursions = new List<Excursion>();
         }
 
-        [Key]
         public int DestinationId { get; set; }
 
         [MaxLength(75)]

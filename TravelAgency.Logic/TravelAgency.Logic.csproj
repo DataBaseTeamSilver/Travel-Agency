@@ -91,6 +91,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateSampleExcursions.cs" />
     <Compile Include="CreateTravelAgencyDb.cs" />
     <Compile Include="DropboxImport.cs" />
     <Compile Include="ImportData\ImportGuidesToSQL.cs" />

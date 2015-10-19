@@ -32,12 +32,12 @@
         {
             var travelAgency = new TravelAgencyDbContext();
 
-            var allDestinationsIds = travelAgency.Destinations
-                .Select(d => d.DestinationId)
-                .ToList();
-
-            var allDestinationsNames = travelAgency.Destinations
-                .Select(d => d.Country)
+            var allDestinations = travelAgency.Destinations
+                .Select(d => new
+                {
+                    ID = d.DestinationId,
+                    Name = d.Country
+                })
                 .ToList();
 
             var allTransportIds = travelAgency.Transports
@@ -59,17 +59,18 @@
 
                 var startDate = new DateTime(2015, rand.Next(1, 13), rand.Next(1, 29));
                 var endDate = startDate.AddDays(rand.Next(5, 15));
+                var currentCountryObj = allDestinations[rand.Next(0, allDestinations.Count - 1)];
 
                 var exursion = new Excursion
                 {
-                    Name = Names[rand.Next(0, Names.Length)] + allDestinationsNames[rand.Next(0, allDestinationsNames.Count-1)],
+                    Name = Names[rand.Next(0, Names.Length)] + currentCountryObj.Name,
                     StartDate = startDate,
                     EndDate = endDate,
-                    DestinationId = allDestinationsIds[rand.Next(0, allDestinationsNames.Count-1)],
+                    DestinationId = currentCountryObj.ID,
                     Clients = rand.Next(0, 150),
                     PricePerClient = (decimal)rand.Next(500, 10000),
-                    TransportId = allTransportIds[rand.Next(0, allDestinationsNames.Count-1)],
-                    GuideId = allGuideId[rand.Next(0, allDestinationsNames.Count-1)]
+                    TransportId = allTransportIds[rand.Next(0, allTransportIds.Count-1)],
+                    GuideId = allGuideId[rand.Next(0, allGuideId.Count-1)]
                 };
 
                 travelAgency.Excursions.Add(exursion);

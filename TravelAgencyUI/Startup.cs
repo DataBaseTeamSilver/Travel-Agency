@@ -8,21 +8,27 @@
     {
         public Startup()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void EnterWithCreatingDatabase(object sender, EventArgs e)
         {
             var travelAgency = new CreateTravelAgencyDb();
             var result = travelAgency.CreateTravelAgencyDbFromModel();
             MessageBox.Show(result);
-            
-            FirstPage firtsPage = new FirstPage();
-            firtsPage.Show();
+
+            this.LoadFirstPage();           
         }
 
-        private void Startup_Load(object sender, EventArgs e)
+        private void EnterWithoutCreatingDatabase(object sender, EventArgs e)
         {
+            this.LoadFirstPage();
+        }
+
+        private void LoadFirstPage()
+        {
+            FirstPage firtsPage = new FirstPage();
+            firtsPage.Show();
         }
     }
 }

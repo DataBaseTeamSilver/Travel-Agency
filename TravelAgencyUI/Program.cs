@@ -1,10 +1,7 @@
 ﻿namespace TravelAgency.UI
 {
     using System;
-    using System.Data.Entity;
     using System.Windows.Forms;
-    using Data;
-    using Data.Migrations;
     using TravelAgencyUI;
 
     public static class Program

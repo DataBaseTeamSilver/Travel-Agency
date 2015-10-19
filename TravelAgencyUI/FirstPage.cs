@@ -17,7 +17,20 @@
         public FirstPage()
         {
             this.InitializeComponent();
+            this.FillDropbox();
         }
+
+        private void FillDropbox()
+        {
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+            DropboxImport inport = new DropboxImport(dbContext);
+
+            this.comboBox1.DataSource = inport.GetDestination();
+            this.comboBox2.DataSource = inport.GetGuides();
+            this.comboBox3.DataSource = inport.GetTransports();
+            //this.comboBox1.AutoCompleteSource = listToInport;
+        }
+
 
         private void Button4Click(object sender, System.EventArgs e)
         {
@@ -87,6 +100,7 @@
         {
             HideLoadDataButtons();
             button8.Visible = true;
+            button9.Visible = true;
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -125,6 +139,28 @@
             PdfGenerator pdfGenerator = new PdfGenerator();
 
             pdfGenerator.GeneratePdfReports(dbContext);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+            XMLGenerator xmlGenerator = new XMLGenerator();
+
+        }
+
+        private void GenerateXmlButtonHandler(object sender, EventArgs e)
+        {
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+            XMLGenerator xmlGenerator = new XMLGenerator();
+
+            var cb1Value = this.comboBox1.SelectedValue.ToString();
+            var cb2Value = this.comboBox2.SelectedValue.ToString();
+            var cb3Value = this.comboBox3.SelectedValue.ToString();
+            xmlGenerator.XmlGenerate(dbContext, cb1Value, cb2Value, cb3Value);
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

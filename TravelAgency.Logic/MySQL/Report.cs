@@ -6,6 +6,8 @@
 
         public string Name { get; set; }
 
+        public string Destination { get; set; }
+
         public int Duration { get; set; }
 
         public int ClientsCount { get; set; }

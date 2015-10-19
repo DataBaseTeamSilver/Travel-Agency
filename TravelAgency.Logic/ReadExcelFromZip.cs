@@ -13,8 +13,9 @@
     {
         private static string extractPath = "../../../ExcelFiles";
 
-        public void SelectExcelFilesFromZip(string path)
+        public List<Destination> SelectExcelFilesFromZip(string path)
         {
+            var destinations = new List<Destination>();
             using (ZipArchive archive = ZipFile.Open(path, ZipArchiveMode.Update))
             {
                 foreach (ZipArchiveEntry entry in archive.Entries)
@@ -31,14 +32,15 @@
                             connection.Open();
                             var excelSchema = connection.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
                             var sheetName = excelSchema.Rows[0]["TABLE_NAME"].ToString();
-                            this.ReadExcelData(connection, sheetName);
+                            destinations = this.ReadExcelData(connection, sheetName);
                         }
                     }
                 }
+                return destinations;
             }
         }
 
-        private void ReadExcelData(OleDbConnection conn, string sheetName)
+        private List<Destination> ReadExcelData(OleDbConnection conn, string sheetName)
         {
             Console.WriteLine("Reading data...");
             var excelDbCommand = new OleDbCommand(@"SELECT * FROM [" + sheetName + "]", conn);
@@ -58,14 +60,7 @@
                         destinations.Add(destination);
                     }
                 }
-
-                var db = new TravelAgencyDbContext();
-                foreach (var destination in destinations)
-                {
-                    db.Destinations.Add(destination);
-                }
-
-                db.SaveChanges();
+                return destinations;
             }
         }
     }

@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DropboxImport.cs" />
+    <Compile Include="ImportToSQL.cs" />
     <Compile Include="JsonExporter.cs" />
     <Compile Include="MongoDBGenerator.cs" />
     <Compile Include="MongoDBImporter.cs" />

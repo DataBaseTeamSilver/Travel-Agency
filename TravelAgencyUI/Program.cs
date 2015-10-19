@@ -15,14 +15,9 @@
         [STAThread]
         public static void Main()
         {
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
-            //var db = new TravelAgencyDbContext();
-
-            //db.SaveChanges();
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Startup());
         }
     }
 }

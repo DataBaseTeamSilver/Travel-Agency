@@ -7,15 +7,15 @@
 
     internal partial class ReportsFluentModel : OpenAccessContext
     {
-        static MetadataContainer metadataContainer = new ReportsFluentSource().GetModel();
+        private const string DbConnection = "MySqlTravelAgency";
 
-        static BackendConfiguration backendConfiguration = new BackendConfiguration()
+        private static MetadataContainer metadataContainer = new ReportsFluentSource().GetModel();
+
+        private static BackendConfiguration backendConfiguration = new BackendConfiguration()
         {
             Backend = "MySql",
             ProviderName = "MySql.Data.MySqlClient"
         };
-
-        private const string DbConnection = "MySqlTravelAgency";
 
         public ReportsFluentModel()
             : base(DbConnection, backendConfiguration, metadataContainer)

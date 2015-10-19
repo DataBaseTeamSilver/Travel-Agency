@@ -7,7 +7,6 @@
 
     public class MySqlImporter
     {
-
         public void UpdateDatabase(TravelAgencyDbContext db)
         {
             using (var reportsContext = new ReportsFluentModel())
@@ -37,8 +36,8 @@
                         reportsContext.Add(report);
                     }
                 }
-                reportsContext.SaveChanges();
 
+                reportsContext.SaveChanges();
             }
         }
 

@@ -15,7 +15,7 @@
     public class MongoDBGenerator
     {
         private const string DatabaseHost = "mongodb://127.0.0.1";
-        private const string DatabaseName = "Transports";
+        private const string DatabaseName = "TravelAgency";
 
         public void GenerateSampleData()
         {
@@ -48,14 +48,22 @@
         {
             var db = this.GetDatabase(DatabaseName, DatabaseHost);
             var guides = db.GetCollection<BsonDocument>("Guides");
+
+            var currentGuides = guides.FindAll()
+                .Select(x => x["Name"].AsString)
+                .ToList();
+
             foreach (var guide in newGuides)
             {
-                guides.Insert(new BsonDocument
+                if (!currentGuides.Contains(guide.Name))
+                {
+                    guides.Insert(new BsonDocument
                 { 
                     { "Id", guide.GuideId },
                     { "Name", guide.Name },
                     { "Experience", guide.Experience }
                 });
+                }
             }
         }
 

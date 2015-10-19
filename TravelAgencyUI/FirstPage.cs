@@ -3,12 +3,17 @@
     using System;
     using System.Collections.Generic;
     using System.Windows.Forms;
+    using System.Xml;
+    using TravelAgency.Data;
     using TravelAgency.Logic;
+    using TravelAgency.Logic.ImportData;
     using TravelAgency.Model;
 
     public partial class FirstPage : Form
     {
-        public List<Destination> destinations = new List<Destination>();
+        private IEnumerable<Destination> destinations = new List<Destination>();
+        private IEnumerable<Guide> guides = new List<Guide>();
+
         public FirstPage()
         {
             this.InitializeComponent();
@@ -16,6 +21,12 @@
 
         private void Button4Click(object sender, System.EventArgs e)
         {
+            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+            ReadFromXml xmlReader = new ReadFromXml();
+            this.guides = xmlReader.ImportFromXmlIntoSql("../../../Data files/Guides.xml");
+            HideLoadDataButtons();
+            button13.Show();
+            button11.Show();
         }
 
         private void LoadXmlFromZip(object sender, System.EventArgs e)
@@ -25,21 +36,18 @@
             {
                 var path = this.openFileDialog1.InitialDirectory + this.openFileDialog1.FileName;
                 ReadExcelFromZip excelReader = new ReadExcelFromZip();
-                destinations = excelReader.SelectExcelFilesFromZip(path);
+                this.destinations = excelReader.SelectExcelFilesFromZip(path);
                 HideLoadDataButtons();
+                ShowImportLabel();
                 button7.Show();
             }
         }
 
-        private void ShowImportButtons()
+        private void ShowImportLabel()
         {
-            button7.Visible = true;
-            button8.Visible = true;
-            button9.Visible = true;
-            button10.Visible = true;
-            button11.Visible = true;
-            button12.Visible = true;
+            label1.Visible = true;
         }
+
 
         private void HideLoadDataButtons()
         {
@@ -49,17 +57,65 @@
             button4.Visible = false;
             button5.Visible = false;
             button6.Visible = false;
+            loadDataLabel.Visible = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            var import = new ImportToSQL();
-            import.ImportFromExcelToSQL(destinations);
+            var import = new ImportDestinationsToSQL();
+            import.ImportDataToSQL(this.destinations);
         }
 
         private void FirstPage_Load(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            ImportToSQL inputNewGuides = new ImportGuidesToSQL();
+            inputNewGuides.ImportDataToSQL(this.guides);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            var mongoGenerator = new MongoDBGenerator();
+            mongoGenerator.InputGuides(this.guides);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            var excursionsGenerator = new CreateSampleExcursions();
+            excursionsGenerator.AddFirstTenExcursions();
+
+            MessageBox.Show("Added 10 Excursion to the Database");
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            var excursionsGenerator = new CreateSampleExcursions();
+            excursionsGenerator.AddRandomNumberOfExcursion(1000);
+
+            MessageBox.Show("Added 1000 Random Excursion to the Database");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HideLoadDataButtons();
+            button16.Show();
+            
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            var travelAgency = new TravelAgencyDbContext();
+            var transports = new MongoDBImporter();
+            transports.ImportData(travelAgency);
         }
     }
 }

@@ -43,6 +43,11 @@
             this.button6 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -54,7 +59,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(28, 50);
+            this.button1.Location = new System.Drawing.Point(28, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(161, 180);
             this.button1.TabIndex = 1;
@@ -135,14 +140,83 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(371, 25);
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.Transparent;
+            this.button7.Location = new System.Drawing.Point(269, 114);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(149, 148);
             this.button7.TabIndex = 10;
-            this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Visible = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.Transparent;
+            this.button8.Location = new System.Drawing.Point(295, 283);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(123, 120);
+            this.button8.TabIndex = 11;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Location = new System.Drawing.Point(77, 127);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(127, 123);
+            this.button9.TabIndex = 12;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Visible = false;
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.Color.Transparent;
+            this.button10.Location = new System.Drawing.Point(83, 282);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(136, 130);
+            this.button10.TabIndex = 13;
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Visible = false;
+            // 
+            // button11
+            // 
+            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.Color.Transparent;
+            this.button11.Location = new System.Drawing.Point(468, 118);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(142, 141);
+            this.button11.TabIndex = 14;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Visible = false;
+            // 
+            // button12
+            // 
+            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.ForeColor = System.Drawing.Color.Transparent;
+            this.button12.Location = new System.Drawing.Point(524, 265);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(125, 138);
+            this.button12.TabIndex = 15;
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Visible = false;
             // 
             // FirstPage
             // 
@@ -151,6 +225,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(812, 459);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -162,6 +241,7 @@
             this.Name = "FirstPage";
             this.Text = "FirstPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FirstPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +254,10 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
     }
 }

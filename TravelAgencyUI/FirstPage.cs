@@ -26,17 +26,22 @@
                 var path = this.openFileDialog1.InitialDirectory + this.openFileDialog1.FileName;
                 ReadExcelFromZip excelReader = new ReadExcelFromZip();
                 destinations = excelReader.SelectExcelFilesFromZip(path);
-                HideAllButtons();
-                ShowImportButtons();
+                HideLoadDataButtons();
+                button7.Show();
             }
         }
 
         private void ShowImportButtons()
         {
             button7.Visible = true;
+            button8.Visible = true;
+            button9.Visible = true;
+            button10.Visible = true;
+            button11.Visible = true;
+            button12.Visible = true;
         }
 
-        private void HideAllButtons()
+        private void HideLoadDataButtons()
         {
             button1.Visible = false;
             button2.Visible = false;
@@ -50,6 +55,11 @@
         {
             var import = new ImportToSQL();
             import.ImportFromExcelToSQL(destinations);
+        }
+
+        private void FirstPage_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

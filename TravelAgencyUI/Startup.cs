@@ -15,12 +15,16 @@
         {
             var travelAgency = new CreateTravelAgencyDb();
             var result = travelAgency.CreateTravelAgencyDbFromModel();
-
             MessageBox.Show(result);
+            
 
             FirstPage firtsPage = new FirstPage();
-            firtsPage.MdiParent = this;
             firtsPage.Show();
+        }
+
+        private void Startup_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -9,11 +9,6 @@
         private const string SuccessMessage = "Database Travel Agency is created!";
         private const string FailMessage = "Database Travel Agency is already existing!";
 
-        public CreateTravelAgencyDb()
-        {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TravelAgencyDbContext, Configuration>());
-        }
-
         public string CreateTravelAgencyDbFromModel()
         {
             using (var db = new TravelAgencyDbContext())

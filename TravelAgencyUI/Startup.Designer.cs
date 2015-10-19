@@ -50,9 +50,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(477, 261);
             this.Controls.Add(this.button1);
-            this.IsMdiContainer = true;
             this.Name = "Startup";
             this.Text = "Startup";
+            this.Load += new System.EventHandler(this.Startup_Load);
             this.ResumeLayout(false);
 
         }

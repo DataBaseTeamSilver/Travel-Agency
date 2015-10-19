@@ -10,7 +10,7 @@
     {
         public override IEnumerable<ReportTransport> ProcessRequest(TravelAgencyDbContext dbContext, string destination, string guide, string transport)
         {
-            if (guide != String.Empty)
+            if (guide != string.Empty)
             {
                 var excursions = dbContext
                 .Excursions

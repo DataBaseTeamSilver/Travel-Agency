@@ -24,10 +24,10 @@
           
                 if (!resultExpenses.ContainsKey(expenseId))
                 {
-                    resultExpenses.Add(expenseId, (hotelExpense + transportExpense));
+                    resultExpenses.Add(expenseId, hotelExpense + transportExpense);
                 }
-
             }
+
             return resultExpenses;
         }
     }

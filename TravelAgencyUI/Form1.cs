@@ -23,7 +23,7 @@
             this.comboBox1.DataSource = inport.GetDestination();
             this.comboBox2.DataSource = inport.GetGuides();
             this.comboBox3.DataSource = inport.GetTransports();
-            //this.comboBox1.AutoCompleteSource = listToInport;
+            ////this.comboBox1.AutoCompleteSource = listToInport;
         }
 
         private void SaveDataFromExcelToSQLButtonHandler(object sender, EventArgs e)
@@ -76,10 +76,6 @@
 
             var mongoGenerator = new MongoDBGenerator();
             mongoGenerator.InputGuides(newGuides);
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
         }
     }
 }

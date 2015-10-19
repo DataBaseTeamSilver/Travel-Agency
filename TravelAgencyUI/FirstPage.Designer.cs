@@ -224,14 +224,14 @@
             this.loadFromXmlToMongoDbButton.Visible = false;
             this.loadFromXmlToMongoDbButton.Click += new System.EventHandler(this.ImportFromXmlToMongo);
             // 
-            // ImportToExcelButton
+            // importToExcelButton
             // 
-            this.importToExcelButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImportToExcelButton.BackgroundImage")));
+            this.importToExcelButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("importToExcelButton.BackgroundImage")));
             this.importToExcelButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.importToExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.importToExcelButton.ForeColor = System.Drawing.Color.Transparent;
             this.importToExcelButton.Location = new System.Drawing.Point(68, 83);
-            this.importToExcelButton.Name = "ImportToExcelButton";
+            this.importToExcelButton.Name = "importToExcelButton";
             this.importToExcelButton.Size = new System.Drawing.Size(125, 138);
             this.importToExcelButton.TabIndex = 15;
             this.importToExcelButton.UseVisualStyleBackColor = true;
@@ -254,6 +254,7 @@
             // 
             // addExcursionsButton
             // 
+            this.addExcursionsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addExcursionsButton.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addExcursionsButton.Location = new System.Drawing.Point(156, 433);
             this.addExcursionsButton.Name = "addExcursionsButton";
@@ -265,6 +266,7 @@
             // 
             // add1000randomExcursionsButton
             // 
+            this.add1000randomExcursionsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.add1000randomExcursionsButton.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add1000randomExcursionsButton.Location = new System.Drawing.Point(474, 433);
             this.add1000randomExcursionsButton.Name = "add1000randomExcursionsButton";

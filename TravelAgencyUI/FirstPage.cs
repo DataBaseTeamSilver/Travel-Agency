@@ -33,14 +33,22 @@
                 this.HideLoadDataButtons();
                 this.ShowImportLabel();
                 importFromExcelToSqlButton.Show();
-                backButton.Visible = true;
+                this.backButton.Visible = true;
             }
         }
 
         private void ImportExcelDataToSql(object sender, EventArgs e)
         {
-            var import = new ImportDestinationsToSQL();
-            import.ImportDataToSQL(this.destinations);
+            try
+            {
+                var import = new ImportDestinationsToSQL();
+                import.ImportDataToSQL(this.destinations);
+                MessageBox.Show("Excel data loaded to SQL successfully!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Excel data couldn't be loaded to SQL!");
+            }
         }
 
         private void ReadFromXML(object sender, System.EventArgs e)
@@ -51,33 +59,57 @@
             this.HideLoadDataButtons();
             importFormXmlToSqlButton.Show();
             loadFromXmlToMongoDbButton.Show();
-            backButton.Visible = true;
+            this.backButton.Visible = true;
         }
 
         private void ImportFromXmlToSql(object sender, EventArgs e)
         {
-            ImportToSQL inputNewGuides = new ImportGuidesToSQL();
-            inputNewGuides.ImportDataToSQL(this.guides);
+            try
+            {
+                ImportToSQL inputNewGuides = new ImportGuidesToSQL();
+                inputNewGuides.ImportDataToSQL(this.guides);
+                MessageBox.Show("XML data loaded to SQL successfull!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("XML data couldn't be loaded to SQL!");
+            }
         }
 
         private void ImportFromXmlToMongo(object sender, EventArgs e)
         {
-            var mongoGenerator = new MongoDBGenerator();
-            mongoGenerator.InputGuides(this.guides);
+            try
+            {
+                var mongoGenerator = new MongoDBGenerator();
+                mongoGenerator.InputGuides(this.guides);
+                MessageBox.Show("XML data loaded successfully to MongoDb!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("XML data couldn't be loaded to MongoDb!");
+            }
         }
 
         private void ReadFromMongoDb(object sender, EventArgs e)
         {
             this.HideLoadDataButtons();
             importFromMongoDbToSqlButton.Show();
-            backButton.Visible = true;
+            this.backButton.Visible = true;
         }
 
         private void ImportFromMongoToSQL(object sender, EventArgs e)
         {
-            var travelAgency = new TravelAgencyDbContext();
-            var transports = new MongoDBImporter();
-            transports.ImportData(travelAgency);
+            try
+            {
+                var travelAgency = new TravelAgencyDbContext();
+                var transports = new MongoDBImporter();
+                transports.ImportData(travelAgency);
+                MessageBox.Show("The data from MongoDb was successfully loaded to SQL!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("The data from MongoDb couldn't be loaded to SQL!");
+            }
         }
 
         private void ReadFromSQL(object sender, EventArgs e)
@@ -89,7 +121,7 @@
             destinationsComboBox.Visible = true;
             guidesComboBox.Visible = true;
             transportsComboBox.Visible = true;
-            backButton.Visible = true;
+            this.backButton.Visible = true;
         }
 
         private void FillDropbox()
@@ -103,24 +135,6 @@
             ////this.comboBox1.AutoCompleteSource = listToInport;
         }
 
-        private void GenerateXmlButtonHandler(object sender, EventArgs e)
-        {
-            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
-            XMLGenerator xmlGenerator = new XMLGenerator();
-
-            var cb1Value = this.destinationsComboBox.SelectedValue.ToString();
-            var cb2Value = this.guidesComboBox.SelectedValue.ToString();
-            var cb3Value = this.transportsComboBox.SelectedValue.ToString();
-            xmlGenerator.XmlGenerate(dbContext, cb1Value, cb2Value, cb3Value);
-        }
-
-        private void ImportFromSqlToPdf(object sender, EventArgs e)
-        {
-            TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
-            PdfGenerator pdfGenerator = new PdfGenerator();
-            pdfGenerator.GeneratePdfReports(dbContext);
-        }
-
         private void ImportFromSqlToXml(object sender, EventArgs e)
         {
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
@@ -128,27 +142,77 @@
             this.GenerateXmlButtonHandler(sender, e);
         }
 
+        private void GenerateXmlButtonHandler(object sender, EventArgs e)
+        {
+            try
+            {
+                TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+                XMLGenerator xmlGenerator = new XMLGenerator();
+
+                var cb1Value = this.destinationsComboBox.SelectedValue.ToString();
+                var cb2Value = this.guidesComboBox.SelectedValue.ToString();
+                var cb3Value = this.transportsComboBox.SelectedValue.ToString();
+                xmlGenerator.XmlGenerate(dbContext, cb1Value, cb2Value, cb3Value);
+                MessageBox.Show("XML document was generated successfully with the data from SQL!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("XML document couldn't be generated!");
+            }
+        }
+
+        private void ImportFromSqlToPdf(object sender, EventArgs e)
+        {
+            try
+            {
+                TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
+                PdfGenerator pdfGenerator = new PdfGenerator();
+                pdfGenerator.GeneratePdfReports(dbContext);
+                MessageBox.Show("PDF report  was successfully generated with the data from SQL!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("PDF report couldn't be generated!");
+            }
+        }
+
         private void ImportFromSqlToJson(object sender, EventArgs e)
         {
-            var exporter = new JsonGenerator();
-            exporter.GenerateJsonFiles();
+            try
+            {
+                var exporter = new JsonGenerator();
+                exporter.GenerateJsonFiles();
+                MessageBox.Show("JSON report was successfully generated with the data from SQL!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("JSON report couldn't be generated!");
+            }
         }
 
         private void ReadFromMySqlAndSQLite(object sender, EventArgs e)
         {
             this.HideLoadDataButtons();
             importToExcelButton.Visible = true;
-            backButton.Visible = true;
+            this.backButton.Visible = true;
         }
 
         private void ImportFromMySqlAndSqliteToExcel(object sender, EventArgs e)
         {
-            var db = new TravelAgencyDbContext();
-            var reader = new ReadFromSQLite();
-            var excelReportsToAdd = new ExcelReport(reader);
-            var reports = excelReportsToAdd.GenerateReports(db);
-            var excelWriter = new WritteDataToExcel();
-            excelWriter.WritteDestinationInExcel(reports);
+            try
+            {
+                var db = new TravelAgencyDbContext();
+                var reader = new ReadFromSQLite();
+                var excelReportsToAdd = new ExcelReport(reader);
+                var reports = excelReportsToAdd.GenerateReports(db);
+                var excelWriter = new WritteDataToExcel();
+                excelWriter.WritteDestinationInExcel(reports);
+                MessageBox.Show("Excel report was succesfully generated with the data from MySQL and SQLite1");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Excel report couldn't be generated!");
+            }
         }
 
         private void AddExcursions(object sender, EventArgs e)
@@ -192,7 +256,7 @@
             readFromMySqlAndSqliteButton.Visible = true;
             loadDataLabel.Visible = true;
             label1.Visible = false;
-            backButton.Visible = false;
+            this.backButton.Visible = false;
         }
 
         private void HideAllImportButtons()

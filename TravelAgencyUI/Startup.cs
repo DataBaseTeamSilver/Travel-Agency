@@ -17,11 +17,13 @@
             var result = travelAgency.CreateTravelAgencyDbFromModel();
             MessageBox.Show(result);
 
+            this.Visible = false;
             this.LoadFirstPage();           
         }
 
         private void EnterWithoutCreatingDatabase(object sender, EventArgs e)
         {
+            this.Visible = false;
             this.LoadFirstPage();
         }
 

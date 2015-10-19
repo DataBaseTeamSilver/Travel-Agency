@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using TravelAgency.Data;
-
-namespace TravelAgency.Logic.Dropbox
+﻿namespace TravelAgency.Logic.Dropbox
 {
+    using System.Collections.Generic;
+    using Data;
+
     internal abstract class DropboxApprover
     {
         protected DropboxApprover Successor { get; set; }

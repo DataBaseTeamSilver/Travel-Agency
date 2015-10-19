@@ -68,7 +68,7 @@
             table.AddCell(this.CreateCell(new Phrase("Clients satisfaction"), true));
             table.AddCell(this.CreateCell(new Phrase("Duration in days"), true));
 
-            InputData(excursions, table);
+            this.InputData(excursions, table);
 
             document.Add(table);
         }

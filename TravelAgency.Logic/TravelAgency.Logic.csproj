@@ -107,6 +107,7 @@
     <Compile Include="JsonGenerator.cs" />
     <Compile Include="MongoDBGenerator.cs" />
     <Compile Include="MongoDBImporter.cs" />
+    <Compile Include="MySQL\ExcelReport.cs" />
     <Compile Include="MySQL\MySqlImporter.cs" />
     <Compile Include="MySQL\ReadFromSQLite.cs" />
     <Compile Include="MySQL\Report.cs" />

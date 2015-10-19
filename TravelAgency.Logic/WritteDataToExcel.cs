@@ -10,9 +10,10 @@
 
     public class WritteDataToExcel
     {
-        public void WritteDestinationInExcel()
+        public void WritteDestinationInExcel(string[,] reports)
         {
-            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=../../Destinations.xlsx;Extended Properties='Excel 12.0 xml;HDR=Yes';";
+            //string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=../../Destinations.xlsx;Extended Properties='Excel 12.0 xml;HDR=Yes';";
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=../../../ExcelFiles/IncomeReports.xlsx;Extended Properties='Excel 12.0 xml;HDR=Yes';";
 
             var db = new TravelAgencyDbContext();
 
@@ -23,7 +24,26 @@
             using (dbConn)
             {
                 dbConn.Open();
-                CreateExcelFile(dbConn, destinations);
+                //CreateExcelFile(dbConn, destinations);
+                CreateExcelReports(dbConn, reports);
+            }
+        }
+
+        private void CreateExcelReports(OleDbConnection dbConn, string[,] reports)
+        {
+            var excelSchema = dbConn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
+
+            var sheetName = excelSchema.Rows[0]["TABLE_NAME"].ToString();
+            var reportCount = reports.GetLength(0);
+
+            for (int i = 0; i < reportCount; i++)
+            {
+                var currentReportName = reports[i,0];
+                var currentReportIncome = reports[i,1];
+                var insertCommand = new OleDbCommand(@"INSERT INTO [" + sheetName + "] ([Excursion], [Income]) VALUES (@name, @income)", dbConn);
+                insertCommand.Parameters.AddWithValue("@name", currentReportName);
+                insertCommand.Parameters.AddWithValue("@income", currentReportIncome);
+                insertCommand.ExecuteNonQuery();
             }
         }
 

@@ -168,7 +168,7 @@
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.Transparent;
-            this.button8.Location = new System.Drawing.Point(295, 283);
+            this.button8.Location = new System.Drawing.Point(247, 130);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(123, 120);
             this.button8.TabIndex = 11;
@@ -197,12 +197,13 @@
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.Transparent;
-            this.button10.Location = new System.Drawing.Point(83, 282);
+            this.button10.Location = new System.Drawing.Point(474, 117);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(136, 130);
             this.button10.TabIndex = 13;
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Visible = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -210,7 +211,7 @@
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.Transparent;
-            this.button11.Location = new System.Drawing.Point(468, 118);
+            this.button11.Location = new System.Drawing.Point(474, 112);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(142, 141);
             this.button11.TabIndex = 14;
@@ -298,6 +299,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 21;
+            this.comboBox1.Visible = false;
             // 
             // comboBox2
             // 
@@ -306,6 +308,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 22;
+            this.comboBox2.Visible = false;
             // 
             // comboBox3
             // 
@@ -314,6 +317,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 23;
+            this.comboBox3.Visible = false;
             // 
             // FirstPage
             // 

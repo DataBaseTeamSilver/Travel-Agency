@@ -6,6 +6,7 @@
     using System.Xml;
     using TravelAgency.Data;
     using TravelAgency.Logic;
+    using TravelAgency.Logic.Dropbox;
     using TravelAgency.Logic.ImportData;
     using TravelAgency.Model;
 
@@ -34,6 +35,7 @@
 
         private void Button4Click(object sender, System.EventArgs e)
         {
+
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
             ReadFromXml xmlReader = new ReadFromXml();
             this.guides = xmlReader.ImportFromXmlIntoSql("../../../Data files/Guides.xml");
@@ -101,6 +103,10 @@
             HideLoadDataButtons();
             button8.Visible = true;
             button9.Visible = true;
+            button10.Visible = true;
+            comboBox1.Visible = true;
+            comboBox2.Visible = true;
+            comboBox3.Visible = true;
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -145,6 +151,8 @@
         {
             TravelAgencyDbContext dbContext = new TravelAgencyDbContext();
             XMLGenerator xmlGenerator = new XMLGenerator();
+            this.GenerateXmlButtonHandler(sender, e);
+
 
         }
 
@@ -160,6 +168,13 @@
         }
         private void button5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            var exporter = new JsonExporter();
+            exporter.GenerateJsonFiles();
 
         }
     }

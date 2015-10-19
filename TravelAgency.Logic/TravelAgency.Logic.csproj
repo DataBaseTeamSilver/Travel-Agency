@@ -93,7 +93,14 @@
   <ItemGroup>
     <Compile Include="CreateSampleExcursions.cs" />
     <Compile Include="CreateTravelAgencyDb.cs" />
-    <Compile Include="DropboxImport.cs" />
+    <Compile Include="Dropbox\AllTypeApprover.cs" />
+    <Compile Include="Dropbox\Approver.cs" />
+    <Compile Include="Dropbox\DataApprover.cs" />
+    <Compile Include="Dropbox\DataInvoker.cs" />
+    <Compile Include="Dropbox\DestinationApprover.cs" />
+    <Compile Include="Dropbox\DropboxImport.cs" />
+    <Compile Include="Dropbox\GuideApprover.cs" />
+    <Compile Include="Dropbox\TransportApprover.cs" />
     <Compile Include="ImportData\ImportGuidesToSQL.cs" />
     <Compile Include="ImportData\ImportToSQL.cs" />
     <Compile Include="ImportData\ImportDestinationsToSQL.cs" />

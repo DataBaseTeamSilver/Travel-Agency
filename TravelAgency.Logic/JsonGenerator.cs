@@ -7,7 +7,7 @@
     using Data;
     using Newtonsoft.Json;
 
-    public class JsonExporter
+    public class JsonGenerator
     {
         public void GenerateJsonFiles()
         {
@@ -30,7 +30,7 @@
             foreach (var item in allExcursion)
             {
                 var jsonObj = JsonConvert.SerializeObject(item, Formatting.Indented);
-                var adress = "../../../" + item.ID + ".json";
+                var adress = "../../../Data files/JSON/" + item.ID + ".json";
                 File.WriteAllText(adress, jsonObj);
             }
         }

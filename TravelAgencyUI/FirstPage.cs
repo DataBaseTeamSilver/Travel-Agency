@@ -173,7 +173,7 @@
 
         private void button10_Click(object sender, EventArgs e)
         {
-            var exporter = new JsonExporter();
+            var exporter = new JsonGenerator();
             exporter.GenerateJsonFiles();
 
         }

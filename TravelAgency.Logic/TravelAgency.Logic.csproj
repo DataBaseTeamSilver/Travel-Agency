@@ -104,7 +104,7 @@
     <Compile Include="ImportData\ImportGuidesToSQL.cs" />
     <Compile Include="ImportData\ImportToSQL.cs" />
     <Compile Include="ImportData\ImportDestinationsToSQL.cs" />
-    <Compile Include="JsonExporter.cs" />
+    <Compile Include="JsonGenerator.cs" />
     <Compile Include="MongoDBGenerator.cs" />
     <Compile Include="MongoDBImporter.cs" />
     <Compile Include="MySQL\MySqlImporter.cs" />
